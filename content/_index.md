@@ -18,7 +18,7 @@ chapter: false
 | Phone number        | 0911665177 |
 | Email               | [huynhhiep907@gmail.com](mailto:huynhhiep907@gmail.com) |
 | University          | FPT University |
-| Major               | Information Technology |
+| Major               | Artificial Intelligence |
 | Internship company  | Amazon Web Services Viet Nam Company Limited |
 | Internship position | Workforce Bootcamp - First Cloud AI Journey |
 | Internship duration | September 14, 2026 – December 14, 2026 |
