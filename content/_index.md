@@ -19,10 +19,9 @@ chapter: false
 | :------------------ | :---------- |
 | Full name           | Huỳnh Minh Hiệp |
 | Phone number        | 0911665177 |
-| Email               | [Anguyenvan@gmail.com](mailto:Anguyenvan@gmail.com) |
-| University          | Ho Chi Minh City University of Technology and Education |
+| Email               | [huynhhiep907@gmail.com](mailto:huynhhiep907@gmail.com) |
+| University          | FPT University |
 | Major               | Information Technology |
-| Class               | AWS082025 |
 | Internship company  | Amazon Web Services Viet Nam Company Limited |
 | Internship position | Workforce Bootcamp - First Cloud AI Journey |
 | Internship duration | August 12, 2025 – November 12, 2025 |
