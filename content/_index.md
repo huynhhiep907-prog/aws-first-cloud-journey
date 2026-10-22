@@ -12,24 +12,21 @@ chapter: false
 ⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
 {{% /notice %}}
 
-### Student Information:
-&emsp; **Full Name:** Huỳnh Minh Hiệp
 
-&emsp; **Phone Number:** 0911665177
+## Student Information
 
-&emsp; **Email:** Anguyenvan@gmail.com
+| **Field**           | **Details** |
+| :------------------ | :---------- |
+| Full name           | Huỳnh Minh Hiệp |
+| Phone number        | 0911665177 |
+| Email               | [Anguyenvan@gmail.com](mailto:Anguyenvan@gmail.com) |
+| University          | Ho Chi Minh City University of Technology and Education |
+| Major               | Information Technology |
+| Class               | AWS082025 |
+| Internship company  | Amazon Web Services Viet Nam Company Limited |
+| Internship position | Workforce Bootcamp - First Cloud AI Journey |
+| Internship duration | August 12, 2025 – November 12, 2025 |
 
-&emsp; **University:** Ho Chi Minh City University of Technology and Education
-
-&emsp; **Major:** Information Technology
-
-&emsp; **Class:** AWS082025
-
-&emsp; **Internship Company:** Amazon Web Services Viet Nam Company Limited
-
-&emsp; **Internship Position:** Workforce Bootcamp - First Cloud AI Journey
-
-&emsp; **Internship Duration:** From 12/08/2025 to 12/11/2025
 
 ![Your profile picture](/images/avatar.png)
 
