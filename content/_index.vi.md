@@ -17,6 +17,7 @@ chapter: false
 | Công ty thực tập  | Công ty TNHH Amazon Web Services Viet Nam |
 | Vị trí thực tập | Workforce Bootcamp - First Cloud AI Journey |
 | Thời gian thực tập | Từ ngày 14/9/2026 đến ngày 14/12/2025 |
+
 ![Ảnh đại diện của bạn](/images/avatar.png)
 
 
