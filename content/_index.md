@@ -13,9 +13,9 @@ chapter: false
 {{% /notice %}}
 
 ### Student Information:
-&emsp; **Full Name:** Nguyen Van A
+&emsp; **Full Name:** Huỳnh Minh Hiệp
 
-&emsp; **Phone Number:** 0989888999 
+&emsp; **Phone Number:** 0911665177
 
 &emsp; **Email:** Anguyenvan@gmail.com
 
