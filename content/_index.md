@@ -1,6 +1,6 @@
 ---
 title: "Internship Report"
-date: 2024-01-01
+date: 2026-01-01
 weight: 1
 chapter: false
 ---
@@ -8,9 +8,6 @@ chapter: false
     
 # Internship Report
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
 
 ## Student Information
@@ -24,7 +21,7 @@ chapter: false
 | Major               | Information Technology |
 | Internship company  | Amazon Web Services Viet Nam Company Limited |
 | Internship position | Workforce Bootcamp - First Cloud AI Journey |
-| Internship duration | August 12, 2025 – November 12, 2025 |
+| Internship duration | September 14, 2026 – December 14, 2026 |
 
 
 ![Your profile picture](/images/avatar.png)
