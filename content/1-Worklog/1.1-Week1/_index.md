@@ -8,25 +8,25 @@ pre: " <b> 1.1. </b> "
 
 ### Week 1 Objectives:
 
-* Understand the cloud computing model and the main responsibilities involved in using AWS.
-* Become familiar with AWS global infrastructure and how regions and Availability Zones affect application deployment.
-* Learn the foundations of identity management and cost awareness before working with cloud resources.
+* Complete the initial onboarding activities for the First Cloud AI Journey (FCAJ) program.
+* Understand the program's rules, learning expectations, and available AWS learning resources.
+* Complete the introductory credit-earning tasks and form a project group before starting technical AWS learning in the following weeks.
 
 ### Tasks to be carried out this week:
 
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| 1 | - Review the concept of cloud computing and compare on-premises infrastructure with cloud services.<br>- Identify common cloud benefits such as elasticity, scalability, and pay-as-you-go pricing.<br>- Take notes on IaaS, PaaS, and SaaS and their differences. | 09/14/2026 | 09/14/2026 | [What is Cloud Computing?](https://aws.amazon.com/what-is-cloud-computing/) |
-| 2 | - Study the AWS Shared Responsibility Model.<br>- Distinguish responsibilities handled by AWS from responsibilities handled by customers.<br>- Relate the model to application data, access permissions, and operating-system maintenance. | 09/15/2026 | 09/15/2026 | [AWS Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/) |
-| 3 | - Explore AWS global infrastructure, including Regions, Availability Zones, and edge locations.<br>- Understand why a workload should be deployed in a Region close to its users and services.<br>- Review the Singapore Region as a possible deployment location for a Vietnam-based application. | 09/16/2026 | 09/16/2026 | [AWS Global Infrastructure](https://aws.amazon.com/about-aws/global-infrastructure/) |
-| 4 | - Learn the purpose of AWS Identity and Access Management (IAM).<br>- Differentiate IAM users, groups, roles, and policies.<br>- Study the principle of least privilege and why root-user credentials should not be used for daily tasks. | 09/17/2026 | 09/17/2026 | [IAM User Guide – Security Best Practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html) |
-| 5 | - Learn how Multi-Factor Authentication (MFA) strengthens account security.<br>- Review credential protection practices and the risks of exposing access keys in source code.<br>- Understand the difference between console sign-in credentials and programmatic credentials. | 09/18/2026 | 09/18/2026 | [IAM – Security Credentials](https://docs.aws.amazon.com/IAM/latest/UserGuide/security-creds.html) |
-| 6 | - Explore AWS Billing and Cost Management.<br>- Learn how AWS Budgets and billing alerts help detect unexpected usage.<br>- Review common sources of charges, including storage, data transfer, public IPv4 addresses, and location-based requests. | 09/19/2026 | 09/19/2026 | [AWS Budgets User Guide](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html)<br>[AWS Pricing](https://aws.amazon.com/pricing/) |
+| 1 | - Access the FCAJ Portal and create/register a participant account.<br>- Review the portal layout and identify the main sections used for program announcements, learning tasks, and progress tracking.<br>- Check that the participant profile and registration information are available. | 09/14/2026 | 09/14/2026 | FCAJ Portal (program access and participant registration); [AWS Training and Certification](https://aws.amazon.com/training/) |
+| 2 | - Read the FCAJ program rules, participation requirements, and code of conduct.<br>- Review expectations for attendance, worklog updates, workshop deliverables, and evidence submission.<br>- Note important deadlines and the requirements for completing the program. | 09/15/2026 | 09/15/2026 | FCAJ program guidelines and announcements on the FCAJ Portal; [AWS Training and Certification](https://aws.amazon.com/training/) |
+| 3 | - Attend or review the introductory materials about Amazon Web Services (AWS) and cloud computing.<br>- Learn at a high level what cloud computing provides and how AWS offers on-demand infrastructure and services.<br>- Become familiar with the AWS Management Console and the purpose of AWS Regions. | 09/16/2026 | 09/16/2026 | [What is AWS?](https://aws.amazon.com/what-is-aws/)<br>[What is Cloud Computing?](https://aws.amazon.com/what-is-cloud-computing/)<br>[AWS Global Infrastructure](https://aws.amazon.com/about-aws/global-infrastructure/) |
+| 4 | - Review the five introductory tasks listed in the FCAJ Portal for the AWS promotional credit activity.<br>- Complete the required tasks and check their completion status on the portal.<br>- Review the credit reward information and the conditions for receiving the stated USD 200 AWS credit. | 09/17/2026 | 09/17/2026 | FCAJ Portal – introductory five-task / AWS credit activity; [AWS Free Tier](https://aws.amazon.com/free/) |
+| 5 | - Join a project group with other FCAJ participants.<br>- Discuss members' interests, initial project ideas, and the expected scope of the group workshop.<br>- Agree on a communication channel and arrange an initial way to coordinate group activities. | 09/18/2026 | 09/18/2026 | FCAJ Portal – group formation instructions and program announcements; [AWS Architecture Center](https://aws.amazon.com/architecture/) |
+| 6 | - Hold an initial discussion with group members to shortlist a practical project idea.<br>- Identify the problem the project may address, its potential users, and a preliminary list of expected functions.<br>- Outline the next learning topics and prepare for the AWS fundamentals activities in the following week. | 09/19/2026 | 09/19/2026 | [AWS Architecture Center](https://aws.amazon.com/architecture/)<br>[AWS Well-Architected Framework](https://aws.amazon.com/architecture/well-architected/) |
 
 ### Week 1 Achievements:
 
-* Built a foundational understanding of cloud computing and the IaaS, PaaS, and SaaS service models.
-* Understood the division of security responsibilities between AWS and customers.
-* Learned how Regions, Availability Zones, and edge locations support application availability and content delivery.
-* Became familiar with IAM identities, policies, MFA, and the principle of least privilege.
-* Recognized the importance of monitoring cloud spending before creating or running resources.
+* Completed the initial FCAJ Portal onboarding and reviewed the program's participation requirements.
+* Became familiar with AWS and the basic purpose of cloud computing.
+* Worked through the five introductory portal tasks associated with the stated USD 200 AWS credit activity and reviewed the reward conditions.
+* Formed a project group and began discussing possible workshop directions.
+* Prepared to begin structured AWS fundamentals learning in Week 2.
