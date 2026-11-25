@@ -8,25 +8,25 @@ pre: " <b> 1.3. </b> "
 
 ### Week 3 Objectives:
 
-* Understand how a Content Delivery Network improves delivery of static web content.
-* Learn CloudFront distributions, origins, cache behaviors, and invalidation.
-* Review web protocols and domain concepts needed to publish a website reliably.
+* Understand the basic networking components used by AWS workloads.
+* Learn how Amazon VPC provides an isolated network for cloud resources.
+* Explore EC2 compute fundamentals and the relationship between instances, storage, and network security.
 
 ### Tasks to be carried out this week:
 
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| 1 | - Study the purpose of a CDN and how edge locations reduce latency.<br>- Understand the difference between an origin server and a cache location.<br>- Identify assets suitable for caching, such as CSS, JavaScript, and recipe images. | 09/28/2026 | 09/28/2026 | [What is a CDN?](https://aws.amazon.com/what-is/cdn/) |
-| 2 | - Learn the main components of a CloudFront distribution.<br>- Understand origins, origin paths, default root objects, and distribution domain names.<br>- Review how CloudFront retrieves static content from an S3 origin. | 09/29/2026 | 09/29/2026 | [How CloudFront Works](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html) |
-| 3 | - Study CloudFront cache behaviors and path patterns.<br>- Learn how cache policies control TTL values and which request parameters are included in the cache key.<br>- Consider different caching needs for images, scripts, and frequently changing files. | 09/30/2026 | 09/30/2026 | [Cache Behaviors](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DownloadDistValuesCacheBehavior.html)<br>[Cache Policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html) |
-| 4 | - Learn how CloudFront invalidation works after website files are updated.<br>- Compare invalidation with using versioned filenames for static assets.<br>- Review common causes of users seeing an older cached page. | 10/01/2026 | 10/01/2026 | [Invalidating Files](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Invalidation.html) |
-| 5 | - Review DNS concepts, including domain names, DNS records, and name resolution.<br>- Understand how a domain name can point to a CloudFront distribution.<br>- Study HTTPS and TLS certificates when publishing a website. | 10/02/2026 | 10/02/2026 | [Route 53 Developer Guide](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html)<br>[AWS Certificate Manager](https://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html) |
-| 6 | - Study common HTTP response status codes, including 200, 301, 403, 404, and 5xx responses.<br>- Learn the difference between browser-side errors, origin errors, and permission-related errors.<br>- Prepare a troubleshooting checklist for a static website delivered through CloudFront. | 10/03/2026 | 10/03/2026 | [HTTP Semantics – RFC 9110](https://www.rfc-editor.org/rfc/rfc9110)<br>[CloudFront Troubleshooting](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/troubleshooting-response-errors.html) |
+| 1 | - Study the purpose of Amazon Virtual Private Cloud (VPC).<br>- Understand CIDR notation, IP addresses, and the role of a VPC address range.<br>- Review how subnets divide a VPC into smaller network segments. | 09/28/2026 | 09/28/2026 | [What is Amazon VPC?](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) |
+| 2 | - Learn the differences between public and private subnets.<br>- Study route tables, internet gateways, and how traffic is routed.<br>- Understand at a high level how a resource in a public subnet can communicate with the internet. | 09/29/2026 | 09/29/2026 | [VPC Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/configure-subnets.html)<br>[Internet Gateways](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html) |
+| 3 | - Review security groups and network access control lists (network ACLs).<br>- Understand stateful versus stateless traffic filtering.<br>- Learn why inbound and outbound rules should allow only required traffic. | 09/30/2026 | 09/30/2026 | [Security Groups](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html)<br>[Network ACLs](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html) |
+| 4 | - Study Amazon EC2 and its role as a virtual compute service.<br>- Learn about Amazon Machine Images (AMIs), instance types, and instance states.<br>- Understand the difference between stopping, starting, and terminating an instance. | 10/01/2026 | 10/01/2026 | [Amazon EC2 Concepts](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html) |
+| 5 | - Explore EC2 storage options, especially Amazon Elastic Block Store (EBS).<br>- Understand the relationship between an instance and its attached EBS volumes.<br>- Review key-pair use for Linux instance access and basic SSH connection concepts. | 10/02/2026 | 10/02/2026 | [Amazon EBS](https://docs.aws.amazon.com/ebs/latest/userguide/what-is-ebs.html)<br>[Connect to a Linux Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Connect.html) |
+| 6 | - Review common EC2 cost factors, including instance running time, EBS storage, and data transfer.<br>- Learn how to select an instance size appropriate to a workload rather than over-provisioning.<br>- Summarize how VPC, subnet, security group, EC2, and EBS work together. | 10/03/2026 | 10/03/2026 | [EC2 On-Demand Pricing](https://aws.amazon.com/ec2/pricing/on-demand/)<br>[Amazon EBS Pricing](https://aws.amazon.com/ebs/pricing/) |
 
 ### Week 3 Achievements:
 
-* Understood the role of a CDN and how CloudFront uses edge locations to deliver static content.
-* Learned the relationship between an S3 origin and a CloudFront distribution.
-* Became familiar with cache behaviors, cache policies, TTL values, and invalidation.
-* Reviewed DNS, HTTPS, and TLS concepts required for publishing a website.
-* Developed a basic approach to diagnosing common website delivery and HTTP errors.
+* Understood VPC, CIDR ranges, subnets, route tables, and internet gateways.
+* Learned how security groups and network ACLs control network traffic.
+* Became familiar with EC2 instances, AMIs, instance types, and lifecycle operations.
+* Understood the role of EBS and key pairs when working with EC2.
+* Gained a foundation for understanding how AWS resources communicate within a network.
