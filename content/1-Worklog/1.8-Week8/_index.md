@@ -5,53 +5,27 @@ weight: 1
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 8 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Tổng hợp kiến thức về bảo mật, giám sát và tối ưu chi phí cho ứng dụng sử dụng nhiều dịch vụ AWS.
+* Tìm hiểu khả năng mở rộng AI bằng Amazon Bedrock và rà soát kiến thức cần thiết trước giai đoạn Workshop tuần 9–11.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 11/02/2026   | 11/02/2026      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 11/03/2026   | 11/03/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 11/04/2026   | 11/04/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 11/05/2026   | 11/05/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 11/06/2026   | 11/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 1 | **Thứ 2**<br>Tìm hiểu AWS Well-Architected Framework và sáu trụ cột; tập trung vào Security, Reliability, Performance Efficiency và Cost Optimization để đánh giá thiết kế ứng dụng. | https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html | https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html | undefined |
+| 2 | **Thứ 3**<br>Tìm hiểu CloudWatch Metrics, Logs và Alarms; xác định những chỉ số cần theo dõi đối với Lambda và API để phát hiện lỗi hoặc mức sử dụng bất thường. | https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html | https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html | undefined |
+| 3 | **Thứ 4**<br>Tìm hiểu AWS Pricing Calculator và cách ước tính chi phí theo giả định về số request, thời gian chạy, dung lượng lưu trữ và lưu lượng truyền dữ liệu. | https://docs.aws.amazon.com/pricing-calculator/latest/userguide/what-is-pricing-calculator.html | https://docs.aws.amazon.com/pricing-calculator/latest/userguide/what-is-pricing-calculator.html | undefined |
+| 4 | **Thứ 5**<br>Tìm hiểu AWS Budgets và Cost Explorer; đọc cách tạo ngân sách, ngưỡng cảnh báo và theo dõi chi phí theo dịch vụ/Region để hạn chế phát sinh ngoài dự kiến. | https://docs.aws.amazon.com/cost-management/latest/userguide/what-is-costmanagement.html | https://docs.aws.amazon.com/cost-management/latest/userguide/what-is-costmanagement.html | undefined |
+| 5 | **Thứ 6**<br>Tìm hiểu Amazon Bedrock ở mức tổng quan: foundation model, model access, inference và cách gọi model qua API; ghi chú rằng quyền truy cập/quota phải được xác nhận trước khi triển khai. | https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-bedrock.html | https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-bedrock.html | undefined |
+| 6 | **Thứ 7**<br>Ôn tập luồng frontend – API Gateway – Lambda – DynamoDB – Amazon Location Service; tổng hợp câu hỏi còn thiếu về phân quyền, lỗi API, dữ liệu, chi phí và kế hoạch thực hành cho Workshop tuần 9–11. | https://docs.aws.amazon.com/lambda/latest/dg/welcome.html<br>https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html<br>https://docs.aws.amazon.com/location/latest/developerguide/what-is.html | https://docs.aws.amazon.com/lambda/latest/dg/welcome.html<br>https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html<br>https://docs.aws.amazon.com/location/latest/developerguide/what-is.html | undefined |
 
 ### Week 8 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Biết sử dụng các trụ cột Well-Architected để rà soát thiết kế hệ thống.
+* Hiểu vai trò của CloudWatch trong giám sát log, metrics và cảnh báo.
+* Nắm cách ước tính và theo dõi chi phí bằng Pricing Calculator, AWS Budgets và Cost Explorer.
+* Có kiến thức tổng quan về Bedrock và nhận biết điều kiện model access/quota trước khi tích hợp.
+* Tổng hợp được kiến thức nền tảng cần dùng cho giai đoạn Workshop tuần 9–11.
