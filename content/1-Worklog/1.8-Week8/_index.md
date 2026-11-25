@@ -1,31 +1,32 @@
 ---
 title: "Week 8 Worklog"
 date: 2026-11-02
-weight: 1
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
 
 ### Week 8 Objectives:
 
-* Tổng hợp kiến thức về bảo mật, giám sát và tối ưu chi phí cho ứng dụng sử dụng nhiều dịch vụ AWS.
-* Tìm hiểu khả năng mở rộng AI bằng Amazon Bedrock và rà soát kiến thức cần thiết trước giai đoạn Workshop tuần 9–11.
+* Learn how to monitor serverless applications and investigate failures across API Gateway and Lambda.
+* Understand practical application testing, logging, and troubleshooting workflows.
+* Review AWS cost estimation and prepare technical knowledge for the upcoming project workshop.
 
 ### Tasks to be carried out this week:
 
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| 1 | **Thứ 2**<br>Tìm hiểu AWS Well-Architected Framework và sáu trụ cột; tập trung vào Security, Reliability, Performance Efficiency và Cost Optimization để đánh giá thiết kế ứng dụng. | 11/02/2026 | 11/02/2026 | https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html |
-| 2 | **Thứ 3**<br>Tìm hiểu CloudWatch Metrics, Logs và Alarms; xác định những chỉ số cần theo dõi đối với Lambda và API để phát hiện lỗi hoặc mức sử dụng bất thường. | 11/03/2026 | 11/03/2026 | https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html |
-| 3 | **Thứ 4**<br>Tìm hiểu AWS Pricing Calculator và cách ước tính chi phí theo giả định về số request, thời gian chạy, dung lượng lưu trữ và lưu lượng truyền dữ liệu. | 11/04/2026 | 11/04/2026 | https://docs.aws.amazon.com/pricing-calculator/latest/userguide/what-is-pricing-calculator.html |
-| 4 | **Thứ 5**<br>Tìm hiểu AWS Budgets và Cost Explorer; đọc cách tạo ngân sách, ngưỡng cảnh báo và theo dõi chi phí theo dịch vụ/Region để hạn chế phát sinh ngoài dự kiến. | 11/05/2026 | 11/05/2026 | https://docs.aws.amazon.com/cost-management/latest/userguide/what-is-costmanagement.html |
-| 5 | **Thứ 6**<br>Tìm hiểu Amazon Bedrock ở mức tổng quan: foundation model, model access, inference và cách gọi model qua API; ghi chú rằng quyền truy cập/quota phải được xác nhận trước khi triển khai. | 11/06/2026 | 11/06/2026 | https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-bedrock.html |
-| 6 | **Thứ 7**<br>Ôn tập luồng frontend – API Gateway – Lambda – DynamoDB – Amazon Location Service; tổng hợp câu hỏi còn thiếu về phân quyền, lỗi API, dữ liệu, chi phí và kế hoạch thực hành cho Workshop tuần 9–11. | 11/07/2026 | 11/07/2026 | https://docs.aws.amazon.com/lambda/latest/dg/welcome.html<br>https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html<br>https://docs.aws.amazon.com/location/latest/developerguide/what-is.html |
+| 1 | - Study the purpose of Amazon CloudWatch in monitoring AWS resources and applications.<br>- Understand metrics, logs, dashboards, and alarms at a high level.<br>- Identify useful indicators for a serverless web application, such as request count, latency, and function errors. | 11/02/2026 | 11/02/2026 | [Amazon CloudWatch User Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html) |
+| 2 | - Learn how Lambda sends execution logs to CloudWatch Logs.<br>- Review log groups, log streams, timestamps, and retention settings.<br>- Study how log messages and request identifiers can help trace a failed invocation. | 11/03/2026 | 11/03/2026 | [Viewing Lambda Logs](https://docs.aws.amazon.com/lambda/latest/dg/monitoring-cloudwatchlogs.html)<br>[CloudWatch Logs Concepts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatchLogsConcepts.html) |
+| 3 | - Review API Gateway metrics and access logging.<br>- Learn how to investigate 4xx and 5xx responses and distinguish gateway errors from backend function errors.<br>- Prepare a troubleshooting flow from browser request to API Gateway, Lambda, and data source. | 11/04/2026 | 11/04/2026 | [Monitoring API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/monitoring-cloudwatch.html)<br>[HTTP API Troubleshooting](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-troubleshooting.html) |
+| 4 | - Study API testing concepts using request tools such as Postman or curl.<br>- Review how to test query parameters, request headers, status codes, and JSON response bodies.<br>- Learn how to keep test cases repeatable and record expected versus actual results. | 11/05/2026 | 11/05/2026 | [Postman – Sending the First Request](https://learning.postman.com/docs/getting-started/first-steps/sending-the-first-request/)<br>[curl Manual](https://curl.se/docs/manpage.html) |
+| 5 | - Explore AWS Pricing Calculator and learn to estimate costs from service usage assumptions.<br>- Review cost dimensions relevant to the planned application, including S3 storage, CloudFront data transfer, API requests, Lambda duration, DynamoDB capacity, and Location Service requests.<br>- Understand that estimates depend on Region, usage volume, and configuration. | 11/06/2026 | 11/06/2026 | [AWS Pricing Calculator](https://calculator.aws/)<br>[AWS Pricing Overview](https://aws.amazon.com/pricing/) |
+| 6 | - Review AWS Well-Architected Framework principles, especially operational excellence, security, reliability, and cost optimization.<br>- Summarize key concepts studied during Weeks 1–8 and relate them to a small serverless web application.<br>- Prepare a learning checklist for the Workshop phase scheduled for Weeks 9–11. | 11/07/2026 | 11/07/2026 | [AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html)<br>[Serverless Applications Lens](https://docs.aws.amazon.com/wellarchitected/latest/serverless-applications-lens/welcome.html) |
 
 ### Week 8 Achievements:
 
-* Biết sử dụng các trụ cột Well-Architected để rà soát thiết kế hệ thống.
-* Hiểu vai trò của CloudWatch trong giám sát log, metrics và cảnh báo.
-* Nắm cách ước tính và theo dõi chi phí bằng Pricing Calculator, AWS Budgets và Cost Explorer.
-* Có kiến thức tổng quan về Bedrock và nhận biết điều kiện model access/quota trước khi tích hợp.
-* Tổng hợp được kiến thức nền tảng cần dùng cho giai đoạn Workshop tuần 9–11.
+* Understood how CloudWatch metrics, logs, dashboards, and alarms support application monitoring.
+* Learned how to trace Lambda execution logs and investigate API Gateway errors.
+* Reviewed a repeatable approach to testing HTTP endpoints and checking JSON responses.
+* Became familiar with AWS Pricing Calculator and the main cost dimensions of the planned application.
+* Connected the topics studied in Weeks 1–8 with the operational and architectural needs of the upcoming Workshop phase.
