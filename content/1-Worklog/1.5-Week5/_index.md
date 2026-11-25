@@ -1,30 +1,32 @@
 ---
 title: "Week 5 Worklog"
 date: 2026-10-12
-weight: 1
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
 
 ### Week 5 Objectives:
 
-* Hiểu cách thiết kế API để frontend giao tiếp với backend serverless.
-* Nắm các khái niệm route, method, integration, CORS và cơ chế xử lý lỗi HTTP.
+* Understand how APIs allow a frontend application to communicate with backend services.
+* Learn the main concepts of Amazon API Gateway and its integration with AWS Lambda.
+* Review HTTP methods, request parameters, response formats, CORS, and API security.
 
 ### Tasks to be carried out this week:
 
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| 1 | **Thứ 2**<br>Tìm hiểu API Gateway và vai trò làm cổng tiếp nhận request; phân biệt REST API và HTTP API ở mức mục đích sử dụng và tính năng. | 10/12/2026 | 10/12/2026 | https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html |
-| 2 | **Thứ 3**<br>Ôn tập HTTP request/response: method GET, POST, PUT, DELETE; status code, header, query string và request body; liên hệ với API tra cứu dữ liệu. | 10/13/2026 | 10/13/2026 | https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview |
-| 3 | **Thứ 4**<br>Tìm hiểu cách tạo route và kết nối API Gateway với Lambda; đọc về Lambda proxy integration và cấu trúc event mà Lambda nhận được. | 10/14/2026 | 10/14/2026 | https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop.html |
-| 4 | **Thứ 5**<br>Tìm hiểu CORS: origin, allowed methods, allowed headers và preflight OPTIONS; xác định vì sao trình duyệt có thể chặn request giữa hai domain. | 10/15/2026 | 10/15/2026 | https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-cors.html |
-| 5 | **Thứ 6**<br>Tìm hiểu cách thiết kế response API nhất quán: status code, message, dữ liệu JSON và xử lý trường hợp thiếu tham số hoặc không tìm thấy dữ liệu. | 10/16/2026 | 10/16/2026 | https://developer.mozilla.org/en-US/docs/Web/HTTP/Status |
-| 6 | **Thứ 7**<br>Tìm hiểu quy trình kiểm tra API bằng công cụ gửi HTTP request; thực hành đọc response, kiểm tra header và phân biệt lỗi từ API Gateway với lỗi bên trong Lambda. | 10/17/2026 | 10/17/2026 | https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-testing.html |
+| 1 | - Review the client-server model and the role of an API between a browser and backend logic.<br>- Understand endpoints, resources, methods, requests, and responses.<br>- Identify API operations that a recipe discovery website may need, such as listing and searching recipes. | 10/12/2026 | 10/12/2026 | [Amazon API Gateway User Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html) |
+| 2 | - Study REST API concepts and common HTTP methods: GET, POST, PUT, PATCH, and DELETE.<br>- Understand path parameters, query-string parameters, and request bodies.<br>- Review when a read-only search operation should use GET rather than POST. | 10/13/2026 | 10/13/2026 | [HTTP Request Methods – MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)<br>[API Gateway Concepts](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-basic-concept.html) |
+| 3 | - Learn the basic components of an API Gateway HTTP API.<br>- Explore routes, integrations, stages, and deployment concepts.<br>- Compare HTTP APIs and REST APIs at a high level and review their different feature sets. | 10/14/2026 | 10/14/2026 | [Choosing an API Gateway API Type](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-vs-rest.html)<br>[HTTP APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api.html) |
+| 4 | - Study how API Gateway invokes a Lambda function through an integration.<br>- Understand the structure of an incoming event and the response returned by the function.<br>- Review how query parameters can be passed to backend logic for filtering or searching. | 10/15/2026 | 10/15/2026 | [Lambda Proxy Integration](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-lambda-proxy-integrations.html) |
+| 5 | - Learn what Cross-Origin Resource Sharing (CORS) is and why browsers enforce it.<br>- Review how allowed origins, methods, and headers affect frontend-to-API requests.<br>- Identify common CORS configuration mistakes that can prevent a web application from calling its API. | 10/16/2026 | 10/16/2026 | [CORS for HTTP APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-cors.html)<br>[MDN – CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) |
+| 6 | - Review API authentication and authorization options at a high level.<br>- Learn the purpose of throttling, request validation, and access logging.<br>- Study common API response codes and distinguish client errors from backend errors. | 10/17/2026 | 10/17/2026 | [API Gateway Security](https://docs.aws.amazon.com/apigateway/latest/developerguide/security.html)<br>[API Gateway Monitoring](https://docs.aws.amazon.com/apigateway/latest/developerguide/monitoring-cloudwatch.html) |
 
 ### Week 5 Achievements:
 
-* Phân biệt được API Gateway REST API và HTTP API ở mức cơ bản.
-* Hiểu cấu trúc HTTP request/response và các method thường dùng.
-* Nắm được cách API Gateway chuyển request đến Lambda thông qua integration.
-* Hiểu CORS và biết cách đọc status code, response JSON để khoanh vùng lỗi API.
+* Understood how APIs connect frontend requests with backend application logic.
+* Learned common HTTP methods and the roles of path parameters, query parameters, and request bodies.
+* Became familiar with API Gateway routes, integrations, stages, and API types.
+* Understood how API Gateway can invoke Lambda and pass request data to a function.
+* Learned the purpose of CORS, throttling, logging, and basic API security controls.
