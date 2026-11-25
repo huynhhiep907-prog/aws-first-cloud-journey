@@ -5,53 +5,26 @@ weight: 1
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 2 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Hiểu cách quản lý danh tính và quyền truy cập trong AWS theo nguyên tắc đặc quyền tối thiểu.
+* Làm quen với công cụ dòng lệnh và môi trường thao tác AWS phục vụ các bước triển khai sau này.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 09/21/2026   | 09/21/2026      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 09/22/2026   | 09/22/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 09/23/2026   | 09/23/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 09/24/2026   | 09/24/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 09/25/2026   | 09/26/2026      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 1 | **Thứ 2**<br>Tìm hiểu IAM User, Group, Role và Policy; phân biệt danh tính người dùng với vai trò mà dịch vụ AWS đảm nhận. | https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html | https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html | undefined |
+| 2 | **Thứ 3**<br>Đọc cấu trúc IAM Policy: Effect, Action, Resource và Condition; thực hành phân tích một policy mẫu để xác định quyền được cấp. | https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html | https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html | undefined |
+| 3 | **Thứ 4**<br>Tìm hiểu MFA, thông tin xác thực dài hạn và temporary credentials; ghi chú cách bảo vệ tài khoản root và tránh đưa Access Key lên GitHub. | https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa.html | https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa.html | undefined |
+| 4 | **Thứ 5**<br>Tìm hiểu AWS CloudShell: môi trường terminal trên trình duyệt, các công cụ có sẵn và cách kiểm tra Region/tài khoản trước khi thao tác. | https://docs.aws.amazon.com/cloudshell/latest/userguide/welcome.html | https://docs.aws.amazon.com/cloudshell/latest/userguide/welcome.html | undefined |
+| 5 | **Thứ 6**<br>Tìm hiểu AWS CLI profile, lệnh cấu hình và cách kiểm tra danh tính hiện tại bằng sts get-caller-identity; lưu ý không chia sẻ file credentials. | https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html | https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html | undefined |
+| 6 | **Thứ 7**<br>Tìm hiểu cách cấp quyền cho Lambda thông qua execution role thay vì nhúng Access Key vào mã nguồn; đọc ví dụ policy giới hạn quyền truy cập dịch vụ. | https://docs.aws.amazon.com/lambda/latest/dg/lambda-intro-execution-role.html | https://docs.aws.amazon.com/lambda/latest/dg/lambda-intro-execution-role.html | undefined |
 
 ### Week 2 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Phân biệt IAM User, Group, Role và Policy.
+* Biết đọc policy cơ bản và hiểu nguyên tắc least privilege.
+* Nắm được vai trò của MFA, temporary credentials và cách bảo vệ Access Key.
+* Làm quen CloudShell/AWS CLI và hiểu vì sao Lambda cần execution role riêng.
