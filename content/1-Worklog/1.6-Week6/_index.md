@@ -5,53 +5,26 @@ weight: 1
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 6 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Hiểu mô hình cơ sở dữ liệu NoSQL và cách tổ chức dữ liệu theo access pattern.
+* Nắm các thao tác cơ bản với DynamoDB và cách backend truy vấn dữ liệu hiệu quả.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 10/19/2026   | 10/19/2026      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 10/20/2026   | 10/20/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 10/21/2026   | 10/21/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 10/22/2026   | 10/22/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 10/23/2026   | 10/24/2026      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 1 | **Thứ 2**<br>Tìm hiểu Amazon DynamoDB: table, item, attribute và sự khác biệt giữa cơ sở dữ liệu NoSQL dạng key-value/document với cơ sở dữ liệu quan hệ. | https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html | https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html | undefined |
+| 2 | **Thứ 3**<br>Tìm hiểu partition key và sort key; phân tích cách lựa chọn khóa dựa trên câu hỏi ứng dụng cần trả lời thay vì chỉ dựa vào cấu trúc dữ liệu. | https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.CoreComponents.html | https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.CoreComponents.html | undefined |
+| 3 | **Thứ 4**<br>Đọc về các thao tác PutItem, GetItem, UpdateItem và DeleteItem; tìm hiểu cách biểu diễn dữ liệu món ăn/công thức dưới dạng item JSON. | https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithItems.html | https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithItems.html | undefined |
+| 4 | **Thứ 5**<br>So sánh Query và Scan; tìm hiểu vì sao Query thường phù hợp hơn khi truy vấn theo khóa và Scan có thể đọc nhiều dữ liệu hơn cần thiết. | https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Query.html | https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Query.html | undefined |
+| 5 | **Thứ 6**<br>Tìm hiểu Global Secondary Index (GSI) và Local Secondary Index (LSI); xem xét trường hợp cần tìm kiếm theo thuộc tính không phải khóa chính. | https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/SecondaryIndexes.html | https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/SecondaryIndexes.html | undefined |
+| 6 | **Thứ 7**<br>Tìm hiểu DynamoDB với AWS SDK for Python (Boto3), cách Lambda gọi thao tác database và các lưu ý về quyền IAM, phân trang và xử lý lỗi. | https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.Python.html | https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.Python.html | undefined |
 
 ### Week 6 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Hiểu cấu trúc dữ liệu DynamoDB và cách phân biệt table, item, attribute.
+* Biết vai trò của partition key/sort key trong thiết kế dữ liệu.
+* Phân biệt thao tác CRUD, Query và Scan; hiểu mục đích của secondary index.
+* Nắm cách backend Python tương tác với DynamoDB thông qua SDK và IAM role.
