@@ -1,31 +1,32 @@
 ---
 title: "Week 6 Worklog"
 date: 2026-10-19
-weight: 1
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
 
 ### Week 6 Objectives:
 
-* Understand the NoSQL data model and how to organize data around application access patterns.
-* Learn the basic DynamoDB operations and how a backend service can retrieve data efficiently.
+* Understand the serverless computing model and the role of AWS Lambda.
+* Learn Lambda execution concepts, event payloads, runtime configuration, and permissions.
+* Explore how backend application logic can run on demand without managing servers.
 
 ### Tasks to be carried out this week:
 
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| 1 | - Study Amazon DynamoDB concepts, including tables, items, and attributes.<br>- Compare a key-value/document database with a relational database.<br>- Identify data that could be stored as recipe records. | 10/19/2026 | 10/19/2026 | [DynamoDB Introduction](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html) |
-| 2 | - Learn about partition keys and sort keys.<br>- Understand how primary-key design affects data distribution and retrieval.<br>- Consider possible keys for identifying recipes and grouping related records. | 10/20/2026 | 10/20/2026 | [Core Components](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.CoreComponents.html) |
-| 3 | - Review PutItem, GetItem, UpdateItem, and DeleteItem operations.<br>- Understand how JSON-like attributes are represented in DynamoDB items.<br>- Explore how recipe names, ingredients, and instructions could be stored. | 10/21/2026 | 10/21/2026 | [Working with Items](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithItems.html) |
-| 4 | - Compare Query and Scan operations.<br>- Understand why Query is generally preferable when the partition key is known.<br>- Review the impact of reading unnecessary records on performance and cost. | 10/22/2026 | 10/22/2026 | [Querying Tables](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Query.html) |
-| 5 | - Study Global Secondary Indexes (GSI) and Local Secondary Indexes (LSI).<br>- Learn when an index is useful for querying by an attribute other than the table's primary key.<br>- Review the additional storage and write considerations of indexes. | 10/23/2026 | 10/23/2026 | [Secondary Indexes](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/SecondaryIndexes.html) |
-| 6 | - Explore how Python applications access DynamoDB through Boto3.<br>- Review IAM permissions required by an application to read and write table items.<br>- Learn about pagination and basic exception handling when retrieving records. | 10/24/2026 | 10/24/2026 | [DynamoDB with Python](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.Python.html) |
+| 1 | - Study serverless architecture and compare it with managing a continuously running server.<br>- Understand event-driven execution and the pay-per-use model.<br>- Identify suitable tasks for serverless functions, such as processing a search request. | 10/19/2026 | 10/19/2026 | [AWS Serverless](https://aws.amazon.com/serverless/) |
+| 2 | - Learn the basic structure of an AWS Lambda function.<br>- Review supported runtimes, handler functions, deployment packages, and environment variables.<br>- Understand the difference between function code and the Lambda execution environment. | 10/20/2026 | 10/20/2026 | [Lambda Programming Model](https://docs.aws.amazon.com/lambda/latest/dg/foundation-progmodel.html) |
+| 3 | - Study Lambda invocation types and event-driven processing.<br>- Understand synchronous and asynchronous invocation at a high level.<br>- Review how a function receives an event and returns a response. | 10/21/2026 | 10/21/2026 | [Invoking Lambda Functions](https://docs.aws.amazon.com/lambda/latest/dg/lambda-invocation.html) |
+| 4 | - Explore Lambda configuration options, including memory, timeout, temporary storage, and environment variables.<br>- Understand how these settings affect function behavior and cost.<br>- Review why timeout and memory settings should match the workload. | 10/22/2026 | 10/22/2026 | [Configuring Lambda Functions](https://docs.aws.amazon.com/lambda/latest/dg/configuration-function-common.html) |
+| 5 | - Learn about Lambda execution roles and the permissions required by a function.<br>- Distinguish the execution role from the permissions of a person invoking the function.<br>- Review how a function should receive only the permissions needed to access its data source. | 10/23/2026 | 10/23/2026 | [Lambda Execution Role](https://docs.aws.amazon.com/lambda/latest/dg/lambda-intro-execution-role.html) |
+| 6 | - Review Lambda logging and the use of CloudWatch Logs.<br>- Learn how to read invocation logs and identify errors or timeouts.<br>- Explore AWS Lambda Python examples to understand the structure of a request-processing function. | 10/24/2026 | 10/24/2026 | [Lambda Logging](https://docs.aws.amazon.com/lambda/latest/dg/monitoring-cloudwatchlogs.html)<br>[Python Lambda Handler](https://docs.aws.amazon.com/lambda/latest/dg/python-handler.html) |
 
 ### Week 6 Achievements:
 
-* Understood DynamoDB tables, items, attributes, and primary-key concepts.
-* Learned how partition keys and sort keys support efficient data access.
-* Distinguished common CRUD operations and the Query/Scan access patterns.
-* Understood the purpose of secondary indexes and the considerations involved in using them.
-* Became familiar with accessing DynamoDB from Python through Boto3 and granting permissions through IAM roles.
+* Understood the serverless and event-driven computing model.
+* Learned the structure of a Lambda function and the role of its handler, runtime, and deployment package.
+* Became familiar with invocation types and event/response processing.
+* Understood how memory, timeout, and environment variables influence function configuration.
+* Learned why Lambda execution roles and CloudWatch Logs are important for secure operation and troubleshooting.
