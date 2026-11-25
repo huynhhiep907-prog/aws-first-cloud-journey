@@ -5,53 +5,26 @@ weight: 1
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 7 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Tìm hiểu dịch vụ định vị và tìm kiếm địa điểm để hỗ trợ chức năng tìm cửa hàng gần người dùng.
+* Hiểu luồng xử lý vị trí, quyền truy cập và các phương án dự phòng khi không lấy được GPS.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 10/26/2026   | 10/26/2026      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 10/27/2026   | 10/27/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 10/28/2026   | 10/28/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 10/29/2026   | 10/29/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 10/30/2026   | 10/31/2026      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 1 | **Thứ 2**<br>Tìm hiểu Amazon Location Service và các nhóm chức năng Maps, Places, Routes và Geofences; xác định Places phù hợp với bài toán tìm kiếm địa điểm. | https://docs.aws.amazon.com/location/latest/developerguide/what-is.html | https://docs.aws.amazon.com/location/latest/developerguide/what-is.html | undefined |
+| 2 | **Thứ 3**<br>Tìm hiểu Places API và chức năng tìm kiếm địa điểm theo từ khóa; phân biệt tìm kiếm tự do với tìm kiếm theo danh mục/loại địa điểm. | https://docs.aws.amazon.com/location/latest/developerguide/places.html | https://docs.aws.amazon.com/location/latest/developerguide/places.html | undefined |
+| 3 | **Thứ 4**<br>Đọc về tìm kiếm địa điểm gần tọa độ và các tham số vị trí, bán kính/phạm vi tìm kiếm; tìm hiểu cách xử lý kết quả có nhiều loại địa điểm. | https://docs.aws.amazon.com/location/latest/developerguide/search-nearby.html | https://docs.aws.amazon.com/location/latest/developerguide/search-nearby.html | undefined |
+| 4 | **Thứ 5**<br>Tìm hiểu Geocoding và Reverse Geocoding; phân tích cách chuyển địa chỉ người dùng nhập thành tọa độ và cách chuyển tọa độ thành địa chỉ dễ đọc. | https://docs.aws.amazon.com/location/latest/developerguide/geocoding.html | https://docs.aws.amazon.com/location/latest/developerguide/geocoding.html | undefined |
+| 5 | **Thứ 6**<br>Tìm hiểu Geolocation API trên trình duyệt: yêu cầu quyền người dùng, điều kiện HTTPS và cách xử lý trường hợp người dùng từ chối chia sẻ vị trí. | https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API | https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API | undefined |
+| 6 | **Thứ 7**<br>Tìm hiểu cách bảo vệ tài nguyên Amazon Location bằng IAM và cách backend gọi dịch vụ thay cho việc để thông tin xác thực nhạy cảm ở frontend. | https://docs.aws.amazon.com/location/latest/developerguide/security.html | https://docs.aws.amazon.com/location/latest/developerguide/security.html | undefined |
 
 ### Week 7 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Hiểu các chức năng chính của Amazon Location Service và vai trò của Places.
+* Nắm được khác biệt giữa tìm kiếm theo từ khóa, tìm kiếm gần tọa độ và geocoding.
+* Hiểu luồng lấy vị trí GPS trên trình duyệt và phương án nhập địa chỉ thủ công khi người dùng từ chối quyền.
+* Nhận biết các yêu cầu bảo mật khi tích hợp dịch vụ vị trí vào backend.
