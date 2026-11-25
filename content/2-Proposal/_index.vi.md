@@ -52,7 +52,7 @@ Các tiêu chí trên mô tả kết quả và phạm vi chức năng của dự
 
 ## 2.1. Tổng quan kiến trúc
 
-Bếp Thông Minh sử dụng kiến trúc web serverless trên AWS. Giao diện người dùng được lưu trữ trên Amazon S3 và phân phối thông qua Amazon CloudFront. Các yêu cầu nghiệp vụ từ giao diện người dùng được gửi đến Amazon API Gateway, sau đó chuyển đến AWS Lambda để xử lý. Lambda truy xuất dữ liệu công thức từ Amazon DynamoDB, gọi Amazon Location Service khi cần tìm kiếm địa điểm hoặc gọi Amazon Bedrock khi cần thực hiện chức năng AI.
+Bếp Thông Minh sử dụng kiến trúc web serverless trên AWS. Các tệp giao diện người dùng và tài nguyên tĩnh được lưu trữ trên Amazon S3; Amazon CloudFront được cấu hình làm lớp phân phối nội dung phía trước S3. Khi người dùng truy cập website qua tên miền CloudFront, CloudFront tiếp nhận yêu cầu, phân phối nội dung từ nguồn gốc S3 và có thể lưu nội dung vào bộ nhớ đệm tại các điểm hiện diện để cải thiện tốc độ tải trang. Các yêu cầu nghiệp vụ phát sinh khi người dùng thao tác trên giao diện được frontend gửi trực tiếp đến Amazon API Gateway qua HTTPS, sau đó chuyển đến AWS Lambda để xử lý. Lambda truy xuất dữ liệu công thức từ Amazon DynamoDB, gọi Amazon Location Service khi cần tìm kiếm địa điểm hoặc gọi Amazon Bedrock khi cần thực hiện chức năng AI.
 
 Amazon Bedrock được tích hợp vào luồng xử lý phần xử lý phía máy chủ. AWS Lambda đóng vai trò trung gian tiếp nhận yêu cầu, gửi nội dung đến mô hình AI và xử lý phản hồi trước khi trả kết quả về giao diện người dùng. Cách tổ chức này giúp thông tin xác thực và quyền truy cập dịch vụ được quản lý ở phía phần xử lý phía máy chủ thay vì đặt trong mã nguồn giao diện người dùng.
 
@@ -60,10 +60,10 @@ Amazon Bedrock được tích hợp vào luồng xử lý phần xử lý phía 
 
 **[BỔ SUNG SƠ ĐỒ KIẾN TRÚC AWS TỔNG THỂ TẠI ĐÂY]**
 
-Sơ đồ cần thể hiện các luồng chính:
+Sơ đồ cần thể hiện rõ hai luồng kết nối từ trình duyệt:
 
-- Người dùng truy cập website thông qua CloudFront; CloudFront phân phối nội dung giao diện người dùng được lưu trữ trên S3.
-- giao diện người dùng gửi yêu cầu đến API Gateway, sau đó API Gateway chuyển yêu cầu đến Lambda.
+- **Luồng tải website:** Người dùng → Amazon CloudFront → Amazon S3 (nguồn lưu trữ frontend). CloudFront phân phối các tệp giao diện người dùng từ S3; kết nối từ người dùng đến CloudFront sử dụng HTTPS.
+- **Luồng gọi chức năng ứng dụng:** Giao diện người dùng trên trình duyệt → Amazon API Gateway (HTTPS) → AWS Lambda. Luồng API được gọi trực tiếp từ frontend đến API Gateway, không đi qua CloudFront trong kiến trúc hiện tại.
 - Lambda đọc/ghi dữ liệu công thức trong DynamoDB.
 - Lambda gọi Amazon Location Service khi cần tìm kiếm địa điểm cung cấp nguyên liệu.
 - Lambda gọi Amazon Bedrock khi người dùng sử dụng chức năng AI; kết quả được xử lý và trả về giao diện người dùng.
@@ -73,7 +73,7 @@ Sơ đồ cần thể hiện các luồng chính:
 | AWS Service | Vai trò trong dự án |
 |---|---|
 | Amazon S3 | Lưu trữ các tệp giao diện người dùng và tài nguyên tĩnh của website. |
-| Amazon CloudFront | Phân phối nội dung website đến người dùng thông qua mạng phân phối nội dung (CDN). |
+| Amazon CloudFront | Là lớp phân phối nội dung (CDN) phía trước Amazon S3, tiếp nhận yêu cầu truy cập website, phân phối các tệp frontend từ S3 và hỗ trợ tăng tốc tải nội dung thông qua bộ nhớ đệm tại các điểm hiện diện. Người dùng truy cập website qua tên miền CloudFront bằng HTTPS. |
 | Amazon API Gateway | Cung cấp địa chỉ API để giao diện người dùng giao tiếp với phần xử lý phía máy chủ. |
 | AWS Lambda | Tiếp nhận và xử lý logic nghiệp vụ, truy xuất dữ liệu và điều phối lời gọi đến các dịch vụ AWS. |
 | Amazon DynamoDB | Lưu trữ và truy xuất dữ liệu công thức nấu ăn. |
@@ -82,14 +82,14 @@ Sơ đồ cần thể hiện các luồng chính:
 
 ## 2.4. Các luồng hoạt động chính của ứng dụng
 
-- **Truy cập website:** Người dùng truy cập website được phân phối qua CloudFront; nội dung giao diện người dùng được lấy từ S3.
+- **Truy cập website:** Người dùng mở tên miền CloudFront qua HTTPS. CloudFront tiếp nhận yêu cầu và phân phối các tệp giao diện người dùng từ S3; nội dung có thể được lưu trong bộ nhớ đệm tại các điểm hiện diện để giảm thời gian tải khi được yêu cầu lại.
 - **Khám phá công thức:** giao diện người dùng gửi yêu cầu đến API Gateway; Lambda xử lý và truy xuất dữ liệu công thức từ DynamoDB trước khi trả kết quả.
 - **Tìm kiếm địa điểm:** Người dùng cung cấp vị trí GPS hoặc nhập địa chỉ; Lambda gọi Amazon Location Service và trả kết quả về giao diện người dùng.
 - **Xử lý yêu cầu AI:** giao diện người dùng gửi yêu cầu đến API Gateway; Lambda tiếp nhận và kiểm tra dữ liệu đầu vào, sau đó gọi Amazon Bedrock với mô hình Amazon Nova Micro. Lambda tiếp nhận phản hồi từ mô hình, xử lý kết quả và trả về giao diện người dùng.
 
 ## 2.5. Khả năng mở rộng và độ tin cậy
 
-Việc sử dụng các dịch vụ được AWS quản lý/không máy chủ giúp giảm nhu cầu tự quản lý máy chủ và cho phép từng thành phần mở rộng theo nhu cầu sử dụng. S3 và CloudFront đảm nhiệm lưu trữ, phân phối nội dung; API Gateway và Lambda xử lý yêu cầu ứng dụng; DynamoDB cung cấp lớp lưu trữ dữ liệu. Amazon Location Service và Amazon Bedrock được gọi khi ứng dụng cần chức năng tìm kiếm địa điểm hoặc xử lý AI.
+Việc sử dụng các dịch vụ được AWS quản lý/không máy chủ giúp giảm nhu cầu tự quản lý máy chủ và cho phép từng thành phần mở rộng theo nhu cầu sử dụng. Amazon S3 đảm nhiệm lưu trữ frontend, còn CloudFront phân phối nội dung từ S3 đến người dùng và hỗ trợ bộ nhớ đệm ở lớp biên; API Gateway và Lambda xử lý các yêu cầu nghiệp vụ của ứng dụng; DynamoDB cung cấp lớp lưu trữ dữ liệu. Amazon Location Service và Amazon Bedrock được gọi khi ứng dụng cần chức năng tìm kiếm địa điểm hoặc xử lý AI.
 
 Các cơ chế giám sát, cảnh báo, sao lưu và tối ưu hiệu suất sẽ được xem xét theo nhu cầu vận hành và ngân sách. Đối với Amazon Bedrock, cần kiểm soát số lượng yêu cầu, hạn mức sử dụng và thời gian phản hồi để hạn chế ảnh hưởng đến trải nghiệm người dùng.
 
@@ -107,7 +107,7 @@ Bảo mật được xem xét xuyên suốt quá trình thiết kế và triển
 
 ## 3.2. Bảo vệ dữ liệu và API
 
-- Ưu tiên sử dụng HTTPS cho kết nối giữa người dùng và website/API.
+- Ưu tiên sử dụng HTTPS cho kết nối giữa người dùng và website/API; người dùng truy cập website thông qua tên miền CloudFront bằng HTTPS.
 - Kiểm tra và xác thực dữ liệu đầu vào trước khi xử lý.
 - Không trả thông tin nhạy cảm, thông tin xác thực hoặc chi tiết nội bộ trong phản hồi API.
 - Cấu hình CORS, xác thực và giới hạn tần suất truy cập phù hợp với yêu cầu thực tế của ứng dụng.
@@ -159,7 +159,7 @@ Amazon CloudWatch có thể được sử dụng để theo dõi nhật ký, l�
 ## 4.4. Các sản phẩm bàn giao
 
 - Website Bếp Thông Minh được triển khai trên AWS.
-- giao diện người dùng được lưu trữ trên Amazon S3 và phân phối qua CloudFront.
+- Giao diện người dùng được lưu trữ trên Amazon S3 và phân phối qua Amazon CloudFront.
 - Backend/API sử dụng API Gateway và AWS Lambda.
 - Cơ sở dữ liệu công thức trên Amazon DynamoDB.
 - Chức năng tìm kiếm địa điểm tích hợp Amazon Location Service.
