@@ -1,30 +1,32 @@
 ---
 title: "Week 4 Worklog"
 date: 2026-10-05
-weight: 1
+weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
 
 ### Week 4 Objectives:
 
-* Hiểu mô hình serverless và vòng đời xử lý của AWS Lambda.
-* Nắm cách viết, cấu hình, cấp quyền và theo dõi một hàm Lambda bằng Python.
+* Understand the serverless computing model and the role of AWS Lambda.
+* Learn Lambda execution concepts, event payloads, runtime configuration, and permissions.
+* Explore how application logic can be separated from the web interface and executed on demand.
 
 ### Tasks to be carried out this week:
 
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| 1 | **Thứ 2**<br>Tìm hiểu kiến trúc serverless, đặc điểm event-driven và cách Lambda tính toán theo lần gọi thay vì phải duy trì máy chủ liên tục. | 10/05/2026 | 10/05/2026 | https://docs.aws.amazon.com/lambda/latest/dg/welcome.html |
-| 2 | **Thứ 3**<br>Đọc cấu trúc một Lambda function: handler, event, context, runtime và deployment package; tìm hiểu định dạng đầu vào/đầu ra JSON. | 10/06/2026 | 10/06/2026 | https://docs.aws.amazon.com/lambda/latest/dg/python-handler.html |
-| 3 | **Thứ 4**<br>Tìm hiểu cách cấu hình runtime Python, environment variables, timeout và memory; phân biệt cấu hình hàm với dữ liệu truyền trong event. | 10/07/2026 | 10/07/2026 | https://docs.aws.amazon.com/lambda/latest/dg/configuration-function-common.html |
-| 4 | **Thứ 5**<br>Tìm hiểu Lambda execution role và cách cấp quyền tối thiểu cho hàm truy cập dịch vụ khác; xem xét vì sao không lưu Access Key trực tiếp trong code. | 10/08/2026 | 10/08/2026 | https://docs.aws.amazon.com/lambda/latest/dg/lambda-intro-execution-role.html |
-| 5 | **Thứ 6**<br>Tìm hiểu CloudWatch Logs dành cho Lambda: log group, log stream, log event và cách ghi log để hỗ trợ tìm lỗi trong quá trình xử lý request. | 10/09/2026 | 10/09/2026 | https://docs.aws.amazon.com/lambda/latest/dg/monitoring-cloudwatchlogs.html |
-| 6 | **Thứ 7**<br>Đọc hướng dẫn kiểm thử Lambda bằng test event; tìm hiểu cách mô phỏng request, kiểm tra response và nhận diện lỗi do dữ liệu đầu vào không hợp lệ. | 10/10/2026 | 10/10/2026 | https://docs.aws.amazon.com/lambda/latest/dg/testing-functions.html |
+| 1 | - Study serverless architecture and compare it with managing a continuously running server.<br>- Understand event-driven execution and the pay-per-use model.<br>- Identify suitable tasks for serverless functions, such as searching data or processing a user request. | 10/05/2026 | 10/05/2026 | [AWS Serverless](https://aws.amazon.com/serverless/) |
+| 2 | - Learn the basic structure of an AWS Lambda function.<br>- Review supported runtimes, handler functions, deployment packages, and environment variables.<br>- Understand the difference between function code and the Lambda execution environment. | 10/06/2026 | 10/06/2026 | [Lambda Programming Model](https://docs.aws.amazon.com/lambda/latest/dg/foundation-progmodel.html) |
+| 3 | - Study Lambda invocation types and event-driven processing.<br>- Understand synchronous and asynchronous invocation at a high level.<br>- Review how a function receives an event and returns a response. | 10/07/2026 | 10/07/2026 | [Invoking Lambda Functions](https://docs.aws.amazon.com/lambda/latest/dg/lambda-invocation.html) |
+| 4 | - Explore Lambda configuration options, including memory, timeout, temporary storage, and environment variables.<br>- Understand how these settings affect function behavior and cost.<br>- Review why timeout and memory settings should match the workload. | 10/08/2026 | 10/08/2026 | [Configuring Lambda Functions](https://docs.aws.amazon.com/lambda/latest/dg/configuration-function-common.html) |
+| 5 | - Learn about Lambda execution roles and the permissions required by a function.<br>- Distinguish the execution role from the permissions of a person invoking the function.<br>- Review how a function should receive only the permissions needed to access its data source. | 10/09/2026 | 10/09/2026 | [Lambda Execution Role](https://docs.aws.amazon.com/lambda/latest/dg/lambda-intro-execution-role.html) |
+| 6 | - Review Lambda logging and the use of CloudWatch Logs.<br>- Learn how to read invocation logs and identify errors or timeouts.<br>- Explore AWS Lambda Python examples to understand the structure of a small request-processing function. | 10/10/2026 | 10/10/2026 | [Lambda Logging](https://docs.aws.amazon.com/lambda/latest/dg/monitoring-cloudwatchlogs.html)<br>[Python Lambda Handler](https://docs.aws.amazon.com/lambda/latest/dg/python-handler.html) |
 
 ### Week 4 Achievements:
 
-* Hiểu mô hình serverless và cơ chế kích hoạt Lambda theo sự kiện.
-* Nắm cấu trúc handler Python và cách Lambda nhận/trả dữ liệu JSON.
-* Biết các cấu hình quan trọng như runtime, timeout, memory và environment variables.
-* Hiểu cách sử dụng execution role, CloudWatch Logs và test event để quản lý, kiểm tra hàm.
+* Understood the serverless and event-driven computing model.
+* Learned the structure of a Lambda function and the role of its handler, runtime, and deployment package.
+* Became familiar with invocation types and event/response processing.
+* Understood how memory, timeout, and environment variables influence function configuration.
+* Learned why Lambda execution roles and CloudWatch Logs are important for secure operation and troubleshooting.
