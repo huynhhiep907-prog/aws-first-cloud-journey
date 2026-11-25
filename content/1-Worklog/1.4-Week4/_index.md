@@ -15,12 +15,12 @@ pre: " <b> 1.4. </b> "
 
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| 1 | **Thứ 2**<br>Tìm hiểu kiến trúc serverless, đặc điểm event-driven và cách Lambda tính toán theo lần gọi thay vì phải duy trì máy chủ liên tục. | https://docs.aws.amazon.com/lambda/latest/dg/welcome.html | https://docs.aws.amazon.com/lambda/latest/dg/welcome.html | undefined |
-| 2 | **Thứ 3**<br>Đọc cấu trúc một Lambda function: handler, event, context, runtime và deployment package; tìm hiểu định dạng đầu vào/đầu ra JSON. | https://docs.aws.amazon.com/lambda/latest/dg/python-handler.html | https://docs.aws.amazon.com/lambda/latest/dg/python-handler.html | undefined |
-| 3 | **Thứ 4**<br>Tìm hiểu cách cấu hình runtime Python, environment variables, timeout và memory; phân biệt cấu hình hàm với dữ liệu truyền trong event. | https://docs.aws.amazon.com/lambda/latest/dg/configuration-function-common.html | https://docs.aws.amazon.com/lambda/latest/dg/configuration-function-common.html | undefined |
-| 4 | **Thứ 5**<br>Tìm hiểu Lambda execution role và cách cấp quyền tối thiểu cho hàm truy cập dịch vụ khác; xem xét vì sao không lưu Access Key trực tiếp trong code. | https://docs.aws.amazon.com/lambda/latest/dg/lambda-intro-execution-role.html | https://docs.aws.amazon.com/lambda/latest/dg/lambda-intro-execution-role.html | undefined |
-| 5 | **Thứ 6**<br>Tìm hiểu CloudWatch Logs dành cho Lambda: log group, log stream, log event và cách ghi log để hỗ trợ tìm lỗi trong quá trình xử lý request. | https://docs.aws.amazon.com/lambda/latest/dg/monitoring-cloudwatchlogs.html | https://docs.aws.amazon.com/lambda/latest/dg/monitoring-cloudwatchlogs.html | undefined |
-| 6 | **Thứ 7**<br>Đọc hướng dẫn kiểm thử Lambda bằng test event; tìm hiểu cách mô phỏng request, kiểm tra response và nhận diện lỗi do dữ liệu đầu vào không hợp lệ. | https://docs.aws.amazon.com/lambda/latest/dg/testing-functions.html | https://docs.aws.amazon.com/lambda/latest/dg/testing-functions.html | undefined |
+| 1 | **Thứ 2**<br>Tìm hiểu kiến trúc serverless, đặc điểm event-driven và cách Lambda tính toán theo lần gọi thay vì phải duy trì máy chủ liên tục. | 10/05/2026 | 10/05/2026 | https://docs.aws.amazon.com/lambda/latest/dg/welcome.html |
+| 2 | **Thứ 3**<br>Đọc cấu trúc một Lambda function: handler, event, context, runtime và deployment package; tìm hiểu định dạng đầu vào/đầu ra JSON. | 10/06/2026 | 10/06/2026 | https://docs.aws.amazon.com/lambda/latest/dg/python-handler.html |
+| 3 | **Thứ 4**<br>Tìm hiểu cách cấu hình runtime Python, environment variables, timeout và memory; phân biệt cấu hình hàm với dữ liệu truyền trong event. | 10/07/2026 | 10/07/2026 | https://docs.aws.amazon.com/lambda/latest/dg/configuration-function-common.html |
+| 4 | **Thứ 5**<br>Tìm hiểu Lambda execution role và cách cấp quyền tối thiểu cho hàm truy cập dịch vụ khác; xem xét vì sao không lưu Access Key trực tiếp trong code. | 10/08/2026 | 10/08/2026 | https://docs.aws.amazon.com/lambda/latest/dg/lambda-intro-execution-role.html |
+| 5 | **Thứ 6**<br>Tìm hiểu CloudWatch Logs dành cho Lambda: log group, log stream, log event và cách ghi log để hỗ trợ tìm lỗi trong quá trình xử lý request. | 10/09/2026 | 10/09/2026 | https://docs.aws.amazon.com/lambda/latest/dg/monitoring-cloudwatchlogs.html |
+| 6 | **Thứ 7**<br>Đọc hướng dẫn kiểm thử Lambda bằng test event; tìm hiểu cách mô phỏng request, kiểm tra response và nhận diện lỗi do dữ liệu đầu vào không hợp lệ. | 10/10/2026 | 10/10/2026 | https://docs.aws.amazon.com/lambda/latest/dg/testing-functions.html |
 
 ### Week 4 Achievements:
 
