@@ -8,25 +8,25 @@ pre: " <b> 1.2. </b> "
 
 ### Week 2 Objectives:
 
-* Understand object storage and the way Amazon S3 organizes application files.
-* Learn how to protect stored files through bucket policies, versioning, and encryption.
-* Explore how static website assets and structured data files can be prepared for a web application.
+* Build a foundation in cloud computing and the main categories of AWS services.
+* Understand AWS global infrastructure, Regions, and Availability Zones.
+* Learn basic account security, IAM concepts, and safe ways to access AWS.
 
 ### Tasks to be carried out this week:
 
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| 1 | - Study object storage concepts and compare objects, files, and block storage.<br>- Learn the relationship between an S3 bucket, object key, metadata, and object body.<br>- Identify suitable S3 use cases such as images, documents, and static website assets. | 09/21/2026 | 09/21/2026 | [Amazon S3 User Guide](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html) |
-| 2 | - Review S3 bucket naming, object organization, and uploading/downloading objects.<br>- Learn how prefixes organize files by feature or content type.<br>- Consider a folder structure for recipe images and website assets. | 09/22/2026 | 09/22/2026 | [Organizing Objects in S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-folders.html) |
-| 3 | - Study S3 Block Public Access and risks of exposing stored files unintentionally.<br>- Understand the difference between bucket policies and IAM identity policies.<br>- Review how access should be limited to required resources. | 09/23/2026 | 09/23/2026 | [S3 Block Public Access](https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-control-block-public-access.html)<br>[Bucket Policies](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucket-policies.html) |
-| 4 | - Learn how S3 Versioning preserves previous object versions.<br>- Review recovery from accidental overwrites or deletions.<br>- Identify cases where versioning is useful for website files and project data. | 09/24/2026 | 09/24/2026 | [S3 Versioning](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Versioning.html) |
-| 5 | - Study S3 default encryption and the difference between SSE-S3 and SSE-KMS.<br>- Understand encryption at rest and why sensitive data should not be publicly accessible.<br>- Review the relationship between encryption settings and access permissions. | 09/25/2026 | 09/25/2026 | [S3 Server-Side Encryption](https://docs.aws.amazon.com/AmazonS3/latest/userguide/serv-side-encryption.html) |
-| 6 | - Explore S3 Lifecycle rules and storage classes.<br>- Learn how objects can transition to lower-cost storage or expire after a defined period.<br>- Review a retention policy for temporary files and old project assets. | 09/26/2026 | 09/26/2026 | [S3 Lifecycle Management](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lifecycle-mgmt.html)<br>[S3 Storage Classes](https://aws.amazon.com/s3/storage-classes/) |
+| 1 | - Review cloud computing characteristics, including on-demand resources, elasticity, and pay-as-you-go pricing.<br>- Compare cloud infrastructure with traditional on-premises infrastructure.<br>- Distinguish IaaS, PaaS, and SaaS service models. | 09/21/2026 | 09/21/2026 | [What is Cloud Computing?](https://aws.amazon.com/what-is-cloud-computing/) |
+| 2 | - Explore the main AWS service categories: compute, storage, networking, database, and security.<br>- Identify examples of services in each category and their general purposes.<br>- Relate these categories to the needs of a web application. | 09/22/2026 | 09/22/2026 | [AWS Products](https://aws.amazon.com/products/) |
+| 3 | - Study AWS global infrastructure, including Regions and Availability Zones.<br>- Understand how Region selection affects latency, service availability, and pricing.<br>- Review the Singapore Region as a possible location for a project serving users in Vietnam. | 09/23/2026 | 09/23/2026 | [AWS Global Infrastructure](https://aws.amazon.com/about-aws/global-infrastructure/) |
+| 4 | - Learn the purpose of AWS Identity and Access Management (IAM).<br>- Differentiate users, groups, roles, and policies.<br>- Understand authentication versus authorization and the principle of least privilege. | 09/24/2026 | 09/24/2026 | [What is IAM?](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)<br>[IAM Best Practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html) |
+| 5 | - Review root-user protection, multi-factor authentication (MFA), and credential safety.<br>- Understand the difference between console credentials and programmatic access credentials.<br>- Learn why access keys must not be committed to source code or shared in public repositories. | 09/25/2026 | 09/25/2026 | [IAM Security Credentials](https://docs.aws.amazon.com/IAM/latest/UserGuide/security-creds.html)<br>[Protecting the Root User](https://docs.aws.amazon.com/IAM/latest/UserGuide/root-user-best-practices.html) |
+| 6 | - Explore the AWS Management Console and AWS CloudShell as ways to access AWS services.<br>- Review the purpose of AWS CLI and the basic configuration concepts, including profile and Region.<br>- Learn how to check the active identity and configured Region without exposing credentials. | 09/26/2026 | 09/26/2026 | [AWS Management Console](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/getting-started.html)<br>[AWS CLI Configuration](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html)<br>[AWS CloudShell](https://docs.aws.amazon.com/cloudshell/latest/userguide/welcome.html) |
 
 ### Week 2 Achievements:
 
-* Understood how Amazon S3 stores objects and how buckets and object keys organize data.
-* Learned how to organize website assets and distinguish public content from private files.
-* Became familiar with S3 Block Public Access, bucket policies, and least-privilege access.
-* Understood the role of versioning and server-side encryption in protecting stored data.
-* Learned how lifecycle rules and storage classes can help manage long-term storage costs.
+* Understood the basic cloud computing model and common service categories in AWS.
+* Learned how Regions and Availability Zones relate to deployment location and availability.
+* Became familiar with IAM identities, policies, MFA, and least-privilege access.
+* Recognized the importance of protecting root credentials and programmatic access keys.
+* Learned the purpose of the AWS Console, CloudShell, and AWS CLI.
