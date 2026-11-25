@@ -6,49 +6,25 @@ chapter: false
 pre: " <b> 1.1. </b> "
 ---
 
-
 ### Week 1 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Làm quen với chương trình First Cloud AI Journey và xác định lộ trình tự học AWS.
+* Nắm được mô hình điện toán đám mây, các thành phần hạ tầng AWS và cách quản lý tài khoản an toàn.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 09/14/2026   | 09/14/2026      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 09/15/2026   | 09/15/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 09/16/2026   | 09/16/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 09/17/2026   | 09/17/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 09/18/2026   | 09/19/2026      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 1 | **Thứ 2**<br>Tìm hiểu mục tiêu, quy định và cách thức báo cáo của chương trình FCAJ; tạo danh sách các nội dung cần học trong 8 tuần đầu. | https://cloudjourney.awsstudygroup.com/ | https://cloudjourney.awsstudygroup.com/ | undefined |
+| 2 | **Thứ 3**<br>Tìm hiểu điện toán đám mây: IaaS, PaaS, SaaS; phân biệt cloud với hạ tầng máy chủ tự quản lý; ghi chú ưu và nhược điểm của từng mô hình. | https://aws.amazon.com/types-of-cloud-computing/ | https://aws.amazon.com/types-of-cloud-computing/ | undefined |
+| 3 | **Thứ 4**<br>Tìm hiểu AWS Global Infrastructure: Region, Availability Zone và Edge Location; tìm hiểu lý do cần chọn Region phù hợp với người dùng và dịch vụ. | https://docs.aws.amazon.com/global-infrastructure/latest/regions/aws-regions.html | https://docs.aws.amazon.com/global-infrastructure/latest/regions/aws-regions.html | undefined |
+| 4 | **Thứ 5**<br>Đọc AWS Shared Responsibility Model; phân biệt trách nhiệm bảo mật của AWS và khách hàng đối với hạ tầng, dữ liệu, cấu hình và quyền truy cập. | https://aws.amazon.com/compliance/shared-responsibility-model/ | https://aws.amazon.com/compliance/shared-responsibility-model/ | undefined |
+| 5 | **Thứ 6**<br>Làm quen AWS Management Console; tìm hiểu cách tra cứu dịch vụ, chọn Region, theo dõi thông tin tài khoản và nhận biết các khu vực cấu hình quan trọng. | https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/getting-started.html | https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/getting-started.html | undefined |
+| 6 | **Thứ 7**<br>Tìm hiểu các nguyên tắc tránh phát sinh chi phí ngoài dự kiến: Free Tier, AWS Budgets, Cost Explorer và cách kiểm tra dịch vụ đang sử dụng. | https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html | https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html | undefined |
 
 ### Week 1 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Phân biệt được các mô hình dịch vụ và triển khai điện toán đám mây cơ bản.
+* Hiểu vai trò của Region, Availability Zone và Edge Location khi triển khai ứng dụng.
+* Nắm được mô hình trách nhiệm chia sẻ và các nguyên tắc bảo mật tài khoản AWS.
+* Làm quen với AWS Console và biết nơi theo dõi chi phí, ngân sách.
