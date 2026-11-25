@@ -46,7 +46,7 @@ Bếp Thông Minh (Smart Kitchen) là nền tảng web hỗ trợ người dùng
 - Hệ thống có thể gửi yêu cầu đến Amazon Bedrock và nhận phản hồi từ mô hình AI được tích hợp.
 - giao diện người dùng, phần xử lý phía máy chủ, cơ sở dữ liệu và dịch vụ AI được kết nối thông qua các dịch vụ AWS.
 
-Các tiêu chí trên mô tả kết quả và phạm vi chức năng của dự án. Ảnh chụp bảng điều khiển AWS, mã nguồn, nhật ký và kết quả kiểm thử cụ thể được trình bày trong phần Thực hành/Minh chứng, không lặp lại trong Proposal.
+Các tiêu chí trên mô tả kết quả và phạm vi chức năng của dự án. Ảnh chụp bảng điều khiển AWS, mã nguồn, nhật ký và kết quả kiểm thử cụ thể được trình bày trong phần Thực hành/Minh chứng, không lặp lại trong Bản đề xuất.
 
 # 2. Kiến trúc giải pháp
 
@@ -75,7 +75,7 @@ Sơ đồ cần thể hiện các luồng chính:
 | Amazon S3 | Lưu trữ các tệp giao diện người dùng và tài nguyên tĩnh của website. |
 | Amazon CloudFront | Phân phối nội dung website đến người dùng thông qua mạng phân phối nội dung (CDN). |
 | Amazon API Gateway | Cung cấp địa chỉ API để giao diện người dùng giao tiếp với phần xử lý phía máy chủ. |
-| AWS Lambda | Tiếp nhận và xử lý nhật kýic nghiệp vụ, truy xuất dữ liệu và điều phối lời gọi đến các dịch vụ AWS. |
+| AWS Lambda | Tiếp nhận và xử lý logic nghiệp vụ, truy xuất dữ liệu và điều phối lời gọi đến các dịch vụ AWS. |
 | Amazon DynamoDB | Lưu trữ và truy xuất dữ liệu công thức nấu ăn. |
 | Amazon Location Service | Hỗ trợ tìm kiếm địa điểm/cửa hàng theo vị trí hoặc địa chỉ. |
 | Amazon Bedrock | Cung cấp quyền truy cập mô hình AI tạo sinh; dự án tích hợp Amazon Nova Micro để xử lý yêu cầu AI từ ứng dụng. |
@@ -166,7 +166,7 @@ Amazon CloudWatch có thể được sử dụng để theo dõi nhật ký, l�
 - Chức năng AI tích hợp Amazon Bedrock với mô hình Amazon Nova Micro.
 - Tài liệu Proposal và sơ đồ kiến trúc tổng thể.
 
-Ảnh chụp bảng điều khiển AWS, mã nguồn, hướng dẫn triển khai từng bước, nhật ký và kết quả kiểm thử chi tiết thuộc tài liệu Thực hành/Minh chứng triển khai, không phải nội dung chính của Proposal.
+Ảnh chụp bảng điều khiển AWS, mã nguồn, hướng dẫn triển khai từng bước, nhật ký và kết quả kiểm thử chi tiết thuộc tài liệu Thực hành/Minh chứng triển khai, không phải nội dung chính của Bản đề xuất.
 
 # 5. Lộ trình triển khai
 
@@ -232,13 +232,13 @@ Dự toán chi phí vận hành trong tương lai sẽ được lập bằng Cô
 
 | Rủi ro | Ảnh hưởng | Biện pháp giảm thiểu |
 |---|---|---|
-| AWS Service Quota | Một số dịch vụ hoặc mô hình có thể gặp giới hạn về quota hoặc quyền truy cập. | Theo dõi hạn mức, kiểm tra quyền truy cập và điều chỉnh mức sử dụng phù hợp. |
-| API Failure | giao diện người dùng không nhận được dữ liệu từ phần xử lý phía máy chủ. | Ghi nhật ký, xử lý ngoại lệ và kiểm tra trạng thái API. |
-| Database Performance | Truy vấn có thể chậm khi dữ liệu hoặc lượng truy cập tăng. | Tối ưu thiết kế dữ liệu và cách truy vấn. |
-| Location Accuracy | Kết quả địa điểm có thể không đầy đủ hoặc chưa chính xác. | Cho phép nhập địa chỉ thủ công và xử lý kết quả trả về. |
-| AI Response Quality | Phản hồi do mô hình AI tạo ra có thể chưa chính xác hoặc chưa phù hợp với yêu cầu. | Kiểm tra dữ liệu đầu vào, xử lý phản hồi và thông báo phù hợp cho người dùng. |
-| AI Availability and Limits | Yêu cầu AI có thể thất bại khi dịch vụ không khả dụng hoặc chạm giới hạn sử dụng. | Xử lý lỗi, theo dõi hạn mức và cung cấp thông báo khi không thể nhận phản hồi. |
-| Unexpected AWS Costs | Chi phí tăng khi lưu lượng hoặc mức sử dụng dịch vụ vượt dự kiến. | Theo dõi Billing, kiểm soát request/token và thiết lập cảnh báo ngân sách. |
+| Hạn mức dịch vụ AWS | Một số dịch vụ hoặc mô hình có thể gặp giới hạn về quota hoặc quyền truy cập. | Theo dõi hạn mức, kiểm tra quyền truy cập và điều chỉnh mức sử dụng phù hợp. |
+| Lỗi API | giao diện người dùng không nhận được dữ liệu từ phần xử lý phía máy chủ. | Ghi nhật ký, xử lý ngoại lệ và kiểm tra trạng thái API. |
+| Hiệu suất cơ sở dữ liệu | Truy vấn có thể chậm khi dữ liệu hoặc lượng truy cập tăng. | Tối ưu thiết kế dữ liệu và cách truy vấn. |
+| Độ chính xác của kết quả địa điểm | Kết quả địa điểm có thể không đầy đủ hoặc chưa chính xác. | Cho phép nhập địa chỉ thủ công và xử lý kết quả trả về. |
+| Chất lượng phản hồi AI | Phản hồi do mô hình AI tạo ra có thể chưa chính xác hoặc chưa phù hợp với yêu cầu. | Kiểm tra dữ liệu đầu vào, xử lý phản hồi và thông báo phù hợp cho người dùng. |
+| Khả năng hoạt động và giới hạn của AI | Yêu cầu AI có thể thất bại khi dịch vụ không khả dụng hoặc chạm giới hạn sử dụng. | Xử lý lỗi, theo dõi hạn mức và cung cấp thông báo khi không thể nhận phản hồi. |
+| Chi phí AWS phát sinh ngoài dự kiến | Chi phí tăng khi lưu lượng hoặc mức sử dụng dịch vụ vượt dự kiến. | Theo dõi Billing, kiểm soát request/token và thiết lập cảnh báo ngân sách. |
 
 ## 7.3. Kết luận
 
