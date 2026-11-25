@@ -15,12 +15,12 @@ pre: " <b> 1.5. </b> "
 
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| 1 | **Thứ 2**<br>Tìm hiểu API Gateway và vai trò làm cổng tiếp nhận request; phân biệt REST API và HTTP API ở mức mục đích sử dụng và tính năng. | https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html | https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html | undefined |
-| 2 | **Thứ 3**<br>Ôn tập HTTP request/response: method GET, POST, PUT, DELETE; status code, header, query string và request body; liên hệ với API tra cứu dữ liệu. | https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview | https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview | undefined |
-| 3 | **Thứ 4**<br>Tìm hiểu cách tạo route và kết nối API Gateway với Lambda; đọc về Lambda proxy integration và cấu trúc event mà Lambda nhận được. | https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop.html | https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop.html | undefined |
-| 4 | **Thứ 5**<br>Tìm hiểu CORS: origin, allowed methods, allowed headers và preflight OPTIONS; xác định vì sao trình duyệt có thể chặn request giữa hai domain. | https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-cors.html | https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-cors.html | undefined |
-| 5 | **Thứ 6**<br>Tìm hiểu cách thiết kế response API nhất quán: status code, message, dữ liệu JSON và xử lý trường hợp thiếu tham số hoặc không tìm thấy dữ liệu. | https://developer.mozilla.org/en-US/docs/Web/HTTP/Status | https://developer.mozilla.org/en-US/docs/Web/HTTP/Status | undefined |
-| 6 | **Thứ 7**<br>Tìm hiểu quy trình kiểm tra API bằng công cụ gửi HTTP request; thực hành đọc response, kiểm tra header và phân biệt lỗi từ API Gateway với lỗi bên trong Lambda. | https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-testing.html | https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-testing.html | undefined |
+| 1 | **Thứ 2**<br>Tìm hiểu API Gateway và vai trò làm cổng tiếp nhận request; phân biệt REST API và HTTP API ở mức mục đích sử dụng và tính năng. | 10/12/2026 | 10/12/2026 | https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html |
+| 2 | **Thứ 3**<br>Ôn tập HTTP request/response: method GET, POST, PUT, DELETE; status code, header, query string và request body; liên hệ với API tra cứu dữ liệu. | 10/13/2026 | 10/13/2026 | https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview |
+| 3 | **Thứ 4**<br>Tìm hiểu cách tạo route và kết nối API Gateway với Lambda; đọc về Lambda proxy integration và cấu trúc event mà Lambda nhận được. | 10/14/2026 | 10/14/2026 | https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop.html |
+| 4 | **Thứ 5**<br>Tìm hiểu CORS: origin, allowed methods, allowed headers và preflight OPTIONS; xác định vì sao trình duyệt có thể chặn request giữa hai domain. | 10/15/2026 | 10/15/2026 | https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-cors.html |
+| 5 | **Thứ 6**<br>Tìm hiểu cách thiết kế response API nhất quán: status code, message, dữ liệu JSON và xử lý trường hợp thiếu tham số hoặc không tìm thấy dữ liệu. | 10/16/2026 | 10/16/2026 | https://developer.mozilla.org/en-US/docs/Web/HTTP/Status |
+| 6 | **Thứ 7**<br>Tìm hiểu quy trình kiểm tra API bằng công cụ gửi HTTP request; thực hành đọc response, kiểm tra header và phân biệt lỗi từ API Gateway với lỗi bên trong Lambda. | 10/17/2026 | 10/17/2026 | https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-testing.html |
 
 ### Week 5 Achievements:
 
