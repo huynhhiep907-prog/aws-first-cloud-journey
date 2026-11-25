@@ -8,25 +8,25 @@ pre: " <b> 1.5. </b> "
 
 ### Week 5 Objectives:
 
-* Understand how APIs allow a frontend application to communicate with backend services.
-* Learn the main concepts of Amazon API Gateway and its integration with AWS Lambda.
-* Review HTTP methods, request parameters, response formats, CORS, and API security.
+* Understand how a Content Delivery Network improves delivery of static web content.
+* Learn CloudFront distributions, origins, cache behaviors, and invalidation.
+* Review DNS, HTTPS, and HTTP concepts needed to publish and troubleshoot a website.
 
 ### Tasks to be carried out this week:
 
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| 1 | - Review the client-server model and the role of an API between a browser and backend logic.<br>- Understand endpoints, resources, methods, requests, and responses.<br>- Identify API operations that a recipe discovery website may need, such as listing and searching recipes. | 10/12/2026 | 10/12/2026 | [Amazon API Gateway User Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html) |
-| 2 | - Study REST API concepts and common HTTP methods: GET, POST, PUT, PATCH, and DELETE.<br>- Understand path parameters, query-string parameters, and request bodies.<br>- Review when a read-only search operation should use GET rather than POST. | 10/13/2026 | 10/13/2026 | [HTTP Request Methods – MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)<br>[API Gateway Concepts](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-basic-concept.html) |
-| 3 | - Learn the basic components of an API Gateway HTTP API.<br>- Explore routes, integrations, stages, and deployment concepts.<br>- Compare HTTP APIs and REST APIs at a high level and review their different feature sets. | 10/14/2026 | 10/14/2026 | [Choosing an API Gateway API Type](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-vs-rest.html)<br>[HTTP APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api.html) |
-| 4 | - Study how API Gateway invokes a Lambda function through an integration.<br>- Understand the structure of an incoming event and the response returned by the function.<br>- Review how query parameters can be passed to backend logic for filtering or searching. | 10/15/2026 | 10/15/2026 | [Lambda Proxy Integration](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-lambda-proxy-integrations.html) |
-| 5 | - Learn what Cross-Origin Resource Sharing (CORS) is and why browsers enforce it.<br>- Review how allowed origins, methods, and headers affect frontend-to-API requests.<br>- Identify common CORS configuration mistakes that can prevent a web application from calling its API. | 10/16/2026 | 10/16/2026 | [CORS for HTTP APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-cors.html)<br>[MDN – CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) |
-| 6 | - Review API authentication and authorization options at a high level.<br>- Learn the purpose of throttling, request validation, and access logging.<br>- Study common API response codes and distinguish client errors from backend errors. | 10/17/2026 | 10/17/2026 | [API Gateway Security](https://docs.aws.amazon.com/apigateway/latest/developerguide/security.html)<br>[API Gateway Monitoring](https://docs.aws.amazon.com/apigateway/latest/developerguide/monitoring-cloudwatch.html) |
+| 1 | - Study the purpose of a CDN and how edge locations reduce latency.<br>- Understand the difference between an origin server and a cache location.<br>- Identify assets suitable for caching, such as CSS, JavaScript, and recipe images. | 10/12/2026 | 10/12/2026 | [What is a CDN?](https://aws.amazon.com/what-is/cdn/) |
+| 2 | - Learn the main components of a CloudFront distribution.<br>- Understand origins, origin paths, default root objects, and distribution domain names.<br>- Review how CloudFront retrieves static content from an S3 origin. | 10/13/2026 | 10/13/2026 | [How CloudFront Works](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html) |
+| 3 | - Study CloudFront cache behaviors and path patterns.<br>- Learn how cache policies control TTL values and which request parameters are included in the cache key.<br>- Consider different caching needs for images, scripts, and frequently changing files. | 10/14/2026 | 10/14/2026 | [Cache Behaviors](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DownloadDistValuesCacheBehavior.html)<br>[Cache Policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html) |
+| 4 | - Learn how CloudFront invalidation works after website files are updated.<br>- Compare invalidation with using versioned filenames for static assets.<br>- Review common causes of users seeing an older cached page. | 10/15/2026 | 10/15/2026 | [Invalidating Files](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Invalidation.html) |
+| 5 | - Review DNS concepts, including domain names, DNS records, and name resolution.<br>- Understand how a domain name can point to a CloudFront distribution.<br>- Study HTTPS and TLS certificates when publishing a website. | 10/16/2026 | 10/16/2026 | [Route 53 Developer Guide](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html)<br>[AWS Certificate Manager](https://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html) |
+| 6 | - Study common HTTP response status codes, including 200, 301, 403, 404, and 5xx responses.<br>- Learn the difference between browser-side errors, origin errors, and permission-related errors.<br>- Prepare a troubleshooting checklist for a static website delivered through CloudFront. | 10/17/2026 | 10/17/2026 | [HTTP Semantics – RFC 9110](https://www.rfc-editor.org/rfc/rfc9110)<br>[CloudFront Troubleshooting](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/troubleshooting-response-errors.html) |
 
 ### Week 5 Achievements:
 
-* Understood how APIs connect frontend requests with backend application logic.
-* Learned common HTTP methods and the roles of path parameters, query parameters, and request bodies.
-* Became familiar with API Gateway routes, integrations, stages, and API types.
-* Understood how API Gateway can invoke Lambda and pass request data to a function.
-* Learned the purpose of CORS, throttling, logging, and basic API security controls.
+* Understood the role of a CDN and how CloudFront uses edge locations to deliver static content.
+* Learned the relationship between an S3 origin and a CloudFront distribution.
+* Became familiar with cache behaviors, cache policies, TTL values, and invalidation.
+* Reviewed DNS, HTTPS, and TLS concepts required for publishing a website.
+* Developed a basic approach to diagnosing common website delivery and HTTP errors.
