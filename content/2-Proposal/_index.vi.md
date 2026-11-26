@@ -16,7 +16,6 @@ pre: " <b> 2. </b> "
 | Kho mã nguồn dự án | https://github.com/veexto/AWS-Final-Project-Cooking/tree/main |
 | Website đã triển khai | https://d18x1ou8x7botm.cloudfront.net/ |
 | Khu vực AWS | Asia Pacific (Singapore) – ap-southeast-1 |
-| Người phụ trách dự án | [CẦN BỔ SUNG] |
 | Ngày lập | Tháng 11/2026 |
 
 ---
@@ -244,9 +243,9 @@ Dự toán này được lập nhằm mô tả quy mô chi phí có thể phát 
 
 | Thành viên | Vai trò | Trách nhiệm |
 |---|---|---|
-| [Tên thành viên] | [Vai trò] | [Nhiệm vụ thực tế] |
-| [Tên thành viên] | [Vai trò] | [Nhiệm vụ thực tế] |
-| [Tên thành viên] | [Vai trò] | [Nhiệm vụ thực tế] |
+| Huỳnh Minh Hiệp | Frontend Developer & UI/UX Designer | Thiết kế và phát triển giao diện website; xây dựng chức năng tìm kiếm, lọc món ăn, hiển thị công thức và kết nối frontend với backend. |
+| Nguyễn Nguyên Vũ | Backend Developer |	Phát triển backend bằng AWS Lambda và API Gateway; xây dựng API, xử lý logic tìm kiếm và gợi ý món ăn; tích hợp Amazon Bedrock để hỗ trợ chatbot AI. |
+| Nguyễn Mạnh Dũng | AWS Cloud Engineer & Database Developer | Cấu hình và triển khai các dịch vụ AWS như S3, CloudFront, DynamoDB, Amazon Location Service và CloudWatch; quản lý dữ liệu công thức, hỗ trợ kiểm thử và vận hành hệ thống. |
 
 ## 7.2. Rủi ro và biện pháp giảm thiểu
 
@@ -276,5 +275,4 @@ Bản đề xuất này xác định bối cảnh, mục tiêu, kiến trúc, ph
 | Kho mã nguồn | https://github.com/veexto/AWS-Final-Project-Cooking/tree/main |
 | Website đã triển khai | https://d18x1ou8x7botm.cloudfront.net/ |
 | Khu vực AWS | ap-southeast-1 (Singapore) |
-| Người phụ trách dự án | [CẦN BỔ SUNG] |
 | Ngày lập | Tháng 11/2026 |
