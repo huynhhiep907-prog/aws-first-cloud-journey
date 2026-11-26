@@ -58,7 +58,8 @@ Amazon Bedrock được tích hợp vào luồng xử lý phần xử lý phía 
 
 ## 2.2. Sơ đồ kiến trúc AWS
 
-**[BỔ SUNG SƠ ĐỒ KIẾN TRÚC AWS TỔNG THỂ TẠI ĐÂY]**
+![Uploading DemoFinalWorkShop.drawio.png…]()
+
 
 Sơ đồ cần thể hiện rõ hai luồng kết nối từ trình duyệt:
 
