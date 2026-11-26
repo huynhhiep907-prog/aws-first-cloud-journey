@@ -61,13 +61,7 @@ Amazon Bedrock được tích hợp vào luồng xử lý phần xử lý phía 
 ![Uploading DemoFinalWorkShop.drawio.png…]()
 
 
-Sơ đồ cần thể hiện rõ hai luồng kết nối từ trình duyệt:
 
-- **Luồng tải website:** Người dùng → Amazon CloudFront → Amazon S3 (nguồn lưu trữ frontend). CloudFront phân phối các tệp giao diện người dùng từ S3; kết nối từ người dùng đến CloudFront sử dụng HTTPS.
-- **Luồng gọi chức năng ứng dụng:** Giao diện người dùng trên trình duyệt → Amazon API Gateway (HTTPS) → AWS Lambda. Luồng API được gọi trực tiếp từ frontend đến API Gateway, không đi qua CloudFront trong kiến trúc hiện tại.
-- Lambda đọc/ghi dữ liệu công thức trong DynamoDB.
-- Lambda gọi Amazon Location Service khi cần tìm kiếm địa điểm cung cấp nguyên liệu.
-- Lambda gọi Amazon Bedrock khi người dùng sử dụng chức năng AI; kết quả được xử lý và trả về giao diện người dùng.
 
 ## 2.3. Các dịch vụ AWS và vai trò
 
