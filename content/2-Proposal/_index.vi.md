@@ -57,7 +57,7 @@ Bếp Thông Minh sử dụng kiến trúc web serverless trên AWS. Các tệp 
 Amazon Bedrock được tích hợp vào luồng xử lý phần xử lý phía máy chủ. AWS Lambda đóng vai trò trung gian tiếp nhận yêu cầu, gửi nội dung đến mô hình AI và xử lý phản hồi trước khi trả kết quả về giao diện người dùng. Cách tổ chức này giúp thông tin xác thực và quyền truy cập dịch vụ được quản lý ở phía phần xử lý phía máy chủ thay vì đặt trong mã nguồn giao diện người dùng.
 
 ## 2.2. Sơ đồ kiến trúc AWS
-![Uploading DemoFinalWorkShop.drawio.png…]()
+![Sơ đồ kiến trúc AWS](DemoFinalWorkShop.drawio.png)
 
 
 
