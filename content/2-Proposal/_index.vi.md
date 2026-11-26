@@ -13,8 +13,8 @@ pre: " <b> 2. </b> "
 
 | Thông tin | Chi tiết |
 |---|---|
-| Kho mã nguồn dự án | https://github.com/huynhhiep907-prog/AWS-Final-Project-Cooking |
-| Website đã triển khai | https://d35j83bya6fr1q.cloudfront.net/cooking/ |
+| Kho mã nguồn dự án | https://github.com/veexto/AWS-Final-Project-Cooking/tree/main |
+| Website đã triển khai | https://d18x1ou8x7botm.cloudfront.net/ |
 | Khu vực AWS | Asia Pacific (Singapore) – ap-southeast-1 |
 | Người phụ trách dự án | [CẦN BỔ SUNG] |
 | Ngày lập | Tháng 11/2026 |
@@ -273,8 +273,8 @@ Bản đề xuất này xác định bối cảnh, mục tiêu, kiến trúc, ph
 | Thông tin | Chi tiết |
 |---|---|
 | Dự án | Bếp Thông Minh – Smart Kitchen Platform |
-| Kho mã nguồn | https://github.com/huynhhiep907-prog/AWS-Final-Project-Cooking |
-| Website đã triển khai | https://d35j83bya6fr1q.cloudfront.net/cooking/ |
+| Kho mã nguồn | https://github.com/veexto/AWS-Final-Project-Cooking/tree/main |
+| Website đã triển khai | https://d18x1ou8x7botm.cloudfront.net/ |
 | Khu vực AWS | ap-southeast-1 (Singapore) |
 | Người phụ trách dự án | [CẦN BỔ SUNG] |
 | Ngày lập | Tháng 11/2026 |
