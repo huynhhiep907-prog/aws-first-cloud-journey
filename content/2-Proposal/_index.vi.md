@@ -184,35 +184,46 @@ Các giả định sử dụng để lập dự toán:
 - Khoảng 100–500 người dùng hoạt động trong một tháng.
 - Tổng số yêu cầu đến API Gateway khoảng 20.000–100.000 request/tháng.
 - Số lượt tìm kiếm địa điểm qua Amazon Location Service khoảng 1.000–5.000 request/tháng.
-- Số lượt gọi Amazon Bedrock khoảng 300–2.500 request/tháng; mỗi request sử dụng lượng token đầu vào và đầu ra ở mức vừa phải.
+- Số lượt gọi Amazon Bedrock giả định là 50 lượt/người dùng/tháng, tương ứng 5.000 lượt cho 100 người dùng và 25.000 lượt cho 500 người dùng. Mỗi lượt sử dụng trung bình 1.000 token đầu vào và 500 token đầu ra.
 - Dữ liệu frontend, hình ảnh và dữ liệu công thức có dung lượng nhỏ; không sử dụng máy chủ EC2 chạy liên tục.
-- CloudFront nằm trong hạn mức sử dụng miễn phí công bố của AWS (tối đa 1 TB truyền dữ liệu ra và 10 triệu HTTP/HTTPS request mỗi tháng). Nếu vượt hạn mức, chi phí có thể tăng.
+- Lưu lượng CloudFront giả định là 20 GB và 20.000 HTTPS request/tháng cho kịch bản 100 người dùng; 100 GB và 100.000 HTTPS request/tháng cho kịch bản 500 người dùng. Chi phí trong bảng được ghi theo kết quả AWS Pricing Calculator trước khi xem xét ưu đãi hoặc hạn mức miễn phí đủ điều kiện.
 
 ## 6.2. Dự toán chi phí theo quy mô người dùng
 
-Bảng dưới đây là **khoảng chi phí dự kiến cho một tháng**, không phải hóa đơn thực tế hay báo giá cố định. Mức chi phí có thể thay đổi theo số lượt truy cập, dung lượng dữ liệu, số lần tìm kiếm địa điểm, số token AI và ưu đãi áp dụng cho tài khoản AWS.
+Bảng dưới đây tổng hợp chi phí ước tính theo **AWS Pricing Calculator** cho hai kịch bản 100 và 500 người dùng hoạt động mỗi tháng. Tất cả mức giá được tính theo khu vực **Asia Pacific (Singapore) – ap-southeast-1**, đơn vị USD/tháng.
 
 | AWS Service | 100 người dùng/tháng (USD) | 500 người dùng/tháng (USD) |
 |---|---:|---:|
-| Amazon S3 | 0.10–0.30 | 0.20–0.50 |
-| Amazon CloudFront | 0–0.30 | 0–0.80 |
-| Amazon API Gateway | 0.05–0.15 | 0.15–0.40 |
-| AWS Lambda | 0.01–0.05 | 0.05–0.20 |
-| Amazon DynamoDB | 0.05–0.15 | 0.15–0.40 |
-| Amazon Location Service | 0.50–2.00 | 2.00–6.00 |
-| Amazon Bedrock (Nova Micro) | 0.05–0.30 | 0.30–1.50 |
-| Amazon CloudWatch | 0.10–0.20 | 0.20–0.50 |
-| **Tổng dự kiến** | **Khoảng 1–4 USD/tháng** | **Khoảng 3–11 USD/tháng** |
+| Amazon S3 | 0.04 | 0.18 |
+| Amazon CloudFront | 2.42 | 12.12 |
+| Amazon API Gateway (REST API) | 0.09 | 0.43 |
+| AWS Lambda | 0.01 | 0.05 |
+| Amazon DynamoDB | 0.01 | 0.05 |
+| Amazon Bedrock (Nova Micro) | 0.71 | 3.53 |
+| Amazon Location Service | 0.55 | 2.75 |
+| Amazon CloudWatch | 0.07 | 0.37 |
+| **Tổng chi phí ước tính/tháng** | **3.90** | **19.48** |
 
-Như vậy, với quy mô từ **100 đến 500 người dùng hoạt động mỗi tháng**, ngân sách vận hành tham khảo có thể nằm trong khoảng **1–11 USD/tháng**, tùy theo mức sử dụng thực tế. Để lập kế hoạch ngân sách an toàn hơn, có thể dự trù khoảng **5 USD/tháng cho 100 người dùng** và **12 USD/tháng cho 500 người dùng**.
+Theo kết quả hiện tại của AWS Pricing Calculator, chi phí ước tính là **3.90 USD/tháng cho 100 người dùng** và **19.48 USD/tháng cho 500 người dùng**. Đây là kết quả dự toán dựa trên lượng sử dụng giả định, không phải hóa đơn thực tế.
 
-Dự toán trên chưa bao gồm thuế, chi phí phát sinh do vượt hạn mức miễn phí, các dịch vụ không nằm trong kiến trúc hiện tại hoặc mức sử dụng tăng đột biến. Amazon Bedrock được tính theo lượng token đầu vào/đầu ra; Amazon Location Service được tính theo loại và số lượng request. Các ưu đãi miễn phí có điều kiện về thời hạn hoặc đối tượng tài khoản không được xem là khoản miễn phí cố định lâu dài.
+**Chi tiết cơ sở tính toán:**
+
+- **Amazon S3:** dung lượng lưu trữ 1 GB/5 GB; Tier 1 requests 500/2.500; Tier 2 requests 20.000/100.000.
+- **Amazon CloudFront:** dữ liệu truyền ra Internet 20 GB/100 GB; HTTPS requests 20.000/100.000.
+- **Amazon API Gateway:** 20.000/100.000 REST API requests.
+- **AWS Lambda:** 625/3.125 GB-second, giả định bộ nhớ 128 MB và thời gian thực thi trung bình 1 giây.
+- **Amazon DynamoDB:** 10.000/50.000 read request units và 10.000/50.000 write request units.
+- **Amazon Bedrock:** 5.000/25.000 đơn vị 1.000 input tokens và 2.500/12.500 đơn vị 1.000 output tokens; giả định 50 lượt gọi/người dùng/tháng, mỗi lượt 1.000 input tokens và 500 output tokens.
+- **Amazon Location Service:** 100/500 Geocode requests và 1.000/5.000 SearchNearby requests.
+- **Amazon CloudWatch:** 0.1/0.5 GB log ingestion và 0.1/0.5 GB-Mo log storage.
+
+Chi phí CloudFront trong bảng phản ánh số tiền Calculator đang hiển thị cho các mức sử dụng đã nhập. Khi xác định ngân sách thực tế, cần kiểm tra lại gói giá, điều kiện Free Tier/ưu đãi và hạn mức miễn phí áp dụng cho tài khoản; không mặc định các khoản này được miễn phí nếu chưa xác minh.
 
 ## 6.3. Các yếu tố có thể làm thay đổi chi phí
 
 - **Amazon Location Service:** số lượt tìm kiếm cửa hàng/địa điểm và loại dữ liệu được yêu cầu trong mỗi request.
 - **Amazon Bedrock:** số lượt gọi mô hình Nova Micro và lượng token đầu vào/đầu ra của từng yêu cầu.
-- **Amazon CloudFront:** dung lượng dữ liệu phân phối và số lượng HTTP/HTTPS request; chi phí có thể phát sinh khi vượt hạn mức miễn phí.
+- **Amazon CloudFront:** dung lượng dữ liệu phân phối và số lượng HTTPS request; cần đối chiếu kết quả Calculator với gói giá và hạn mức miễn phí đủ điều kiện của tài khoản AWS.
 - **API Gateway, Lambda và DynamoDB:** số lượng request, thời gian thực thi, dung lượng dữ liệu và cách truy vấn.
 - **Amazon S3 và CloudWatch:** dung lượng lưu trữ, số lượt đọc/ghi và thời gian lưu nhật ký.
 
