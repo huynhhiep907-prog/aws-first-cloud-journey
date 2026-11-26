@@ -175,39 +175,57 @@ Mốc thời gian bắt đầu/kết thúc sẽ được bổ sung theo lịch t
 
 # 6. Ước tính chi phí AWS
 
-## 6.1. Phương pháp ước tính chi phí
+## 6.1. Cơ sở và giả định ước tính
 
-Dự án sử dụng các dịch vụ AWS theo mô hình serverless/managed nhằm hạn chế việc duy trì máy chủ liên tục. Chi phí phụ thuộc vào mức sử dụng thực tế như dung lượng lưu trữ, lưu lượng truyền dữ liệu, số lượng API request, thời gian thực thi Lambda, thao tác cơ sở dữ liệu, số lần truy vấn địa điểm và số lượng token xử lý qua Amazon Bedrock.
+Chi phí được ước tính cho quy mô khoảng **100–500 người dùng hoạt động mỗi tháng**, triển khai tại khu vực **Asia Pacific (Singapore) – ap-southeast-1**. Đây là kịch bản vận hành quy mô nhỏ đến trung bình, sử dụng kiến trúc serverless và chỉ tính các dịch vụ đang có trong kiến trúc Bếp Thông Minh.
 
-## 6.2. Chi phí AWS thực tế – Tháng 11/2026
+Các giả định sử dụng để lập dự toán:
 
-Theo số liệu Billing được người thực hiện kiểm tra trong giai đoạn phát triển và thử nghiệm tháng 11/2026, Amazon Location Service là dịch vụ đã ghi nhận chi phí 0.55 USD. Các dịch vụ còn lại, bao gồm Amazon Bedrock, chưa có khoản phí được ghi nhận trong bảng kiểm tra tại thời điểm lập Proposal.
+- Khoảng 100–500 người dùng hoạt động trong một tháng.
+- Tổng số yêu cầu đến API Gateway khoảng 20.000–100.000 request/tháng.
+- Số lượt tìm kiếm địa điểm qua Amazon Location Service khoảng 1.000–5.000 request/tháng.
+- Số lượt gọi Amazon Bedrock khoảng 300–2.500 request/tháng; mỗi request sử dụng lượng token đầu vào và đầu ra ở mức vừa phải.
+- Dữ liệu frontend, hình ảnh và dữ liệu công thức có dung lượng nhỏ; không sử dụng máy chủ EC2 chạy liên tục.
+- CloudFront nằm trong hạn mức sử dụng miễn phí công bố của AWS (tối đa 1 TB truyền dữ liệu ra và 10 triệu HTTP/HTTPS request mỗi tháng). Nếu vượt hạn mức, chi phí có thể tăng.
 
-| AWS Service | Chi phí ghi nhận (USD) |
-|---|---:|
-| Amazon S3 | Chưa ghi nhận |
-| Amazon CloudFront | Chưa ghi nhận |
-| Amazon API Gateway | Chưa ghi nhận |
-| AWS Lambda | Chưa ghi nhận |
-| Amazon DynamoDB | Chưa ghi nhận |
-| Amazon Location Service | 0.55 |
-| Amazon Bedrock | Chưa ghi nhận |
-| **Tổng chi phí đã ghi nhận** | **0.55** |
+## 6.2. Dự toán chi phí theo quy mô người dùng
 
-Đây là chi phí đã ghi nhận tại thời điểm kiểm tra, không phải dự báo chi phí vận hành hàng tháng. “Chưa ghi nhận” không đồng nghĩa dịch vụ chắc chắn miễn phí; chi phí có thể chưa vượt ngưỡng tính phí, nằm trong ưu đãi/Free Tier hoặc chưa được cập nhật đầy đủ. Việc tích hợp và kiểm thử thành công Amazon Bedrock không đồng nghĩa đã phát sinh một khoản phí được ghi nhận trong Billing tại thời điểm kiểm tra.
+Bảng dưới đây là **khoảng chi phí dự kiến cho một tháng**, không phải hóa đơn thực tế hay báo giá cố định. Mức chi phí có thể thay đổi theo số lượt truy cập, dung lượng dữ liệu, số lần tìm kiếm địa điểm, số token AI và ưu đãi áp dụng cho tài khoản AWS.
 
-Chi phí Amazon Bedrock phụ thuộc vào mô hình được sử dụng, lượng token đầu vào và đầu ra cũng như số lượng yêu cầu. Cần tiếp tục theo dõi Billing sau khi có mức sử dụng thực tế.
+| AWS Service | 100 người dùng/tháng (USD) | 500 người dùng/tháng (USD) |
+|---|---:|---:|
+| Amazon S3 | 0.10–0.30 | 0.20–0.50 |
+| Amazon CloudFront | 0–0.30 | 0–0.80 |
+| Amazon API Gateway | 0.05–0.15 | 0.15–0.40 |
+| AWS Lambda | 0.01–0.05 | 0.05–0.20 |
+| Amazon DynamoDB | 0.05–0.15 | 0.15–0.40 |
+| Amazon Location Service | 0.50–2.00 | 2.00–6.00 |
+| Amazon Bedrock (Nova Micro) | 0.05–0.30 | 0.30–1.50 |
+| Amazon CloudWatch | 0.10–0.20 | 0.20–0.50 |
+| **Tổng dự kiến** | **Khoảng 1–4 USD/tháng** | **Khoảng 3–11 USD/tháng** |
 
-## 6.3. Tối ưu chi phí
+Như vậy, với quy mô từ **100 đến 500 người dùng hoạt động mỗi tháng**, ngân sách vận hành tham khảo có thể nằm trong khoảng **1–11 USD/tháng**, tùy theo mức sử dụng thực tế. Để lập kế hoạch ngân sách an toàn hơn, có thể dự trù khoảng **5 USD/tháng cho 100 người dùng** và **12 USD/tháng cho 500 người dùng**.
 
-- Theo dõi AWS Billing định kỳ để phát hiện chi phí phát sinh.
-- Tối ưu số lượng request đến API và Amazon Location Service.
-- Kiểm soát số lần gọi Amazon Bedrock và lượng token đầu vào/đầu ra.
-- Sử dụng các dịch vụ serverless/managed phù hợp với lưu lượng thực tế.
-- Đánh giá mức sử dụng và cấu hình tài nguyên trước khi mở rộng hệ thống.
-- Thiết lập cảnh báo ngân sách để kịp thời phát hiện chi phí tăng bất thường.
+Dự toán trên chưa bao gồm thuế, chi phí phát sinh do vượt hạn mức miễn phí, các dịch vụ không nằm trong kiến trúc hiện tại hoặc mức sử dụng tăng đột biến. Amazon Bedrock được tính theo lượng token đầu vào/đầu ra; Amazon Location Service được tính theo loại và số lượng request. Các ưu đãi miễn phí có điều kiện về thời hạn hoặc đối tượng tài khoản không được xem là khoản miễn phí cố định lâu dài.
 
-Dự toán chi phí vận hành trong tương lai sẽ được lập bằng Công cụ tính giá AWS (AWS Pricing Calculator) khi xác định được các giả định như số người dùng, số request mỗi tháng, dung lượng lưu trữ, lưu lượng truyền dữ liệu và mức sử dụng mô hình AI. Không sử dụng số liệu chi phí hiện tại để suy diễn thành chi phí vận hành dài hạn.
+## 6.3. Các yếu tố có thể làm thay đổi chi phí
+
+- **Amazon Location Service:** số lượt tìm kiếm cửa hàng/địa điểm và loại dữ liệu được yêu cầu trong mỗi request.
+- **Amazon Bedrock:** số lượt gọi mô hình Nova Micro và lượng token đầu vào/đầu ra của từng yêu cầu.
+- **Amazon CloudFront:** dung lượng dữ liệu phân phối và số lượng HTTP/HTTPS request; chi phí có thể phát sinh khi vượt hạn mức miễn phí.
+- **API Gateway, Lambda và DynamoDB:** số lượng request, thời gian thực thi, dung lượng dữ liệu và cách truy vấn.
+- **Amazon S3 và CloudWatch:** dung lượng lưu trữ, số lượt đọc/ghi và thời gian lưu nhật ký.
+
+## 6.4. Biện pháp kiểm soát và tối ưu chi phí
+
+- Theo dõi AWS Billing định kỳ và thiết lập cảnh báo ngân sách.
+- Hạn chế gọi Amazon Location Service lặp lại khi người dùng chưa thay đổi vị trí hoặc tiêu chí tìm kiếm.
+- Kiểm soát số lần gọi Amazon Bedrock, giới hạn độ dài prompt và số token phản hồi.
+- Tối ưu bộ nhớ đệm CloudFront đối với các tệp frontend tĩnh.
+- Tối ưu truy vấn DynamoDB và thời gian thực thi Lambda.
+- Định kỳ đối chiếu dự toán với chi phí thực tế để điều chỉnh ngân sách theo lượng người dùng.
+
+Dự toán này được lập nhằm mô tả quy mô chi phí có thể phát sinh khi ứng dụng phục vụ 100–500 người dùng mỗi tháng. Khi có số liệu vận hành thực tế, cần cập nhật lại các giả định trong AWS Pricing Calculator để có kết quả sát hơn với mức sử dụng của hệ thống.
 
 # 7. Quản lý dự án, rủi ro và kết luận
 
