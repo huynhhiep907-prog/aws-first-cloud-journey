@@ -46,8 +46,6 @@ Bếp Thông Minh (Smart Kitchen) là nền tảng web hỗ trợ người dùng
 - Hệ thống có thể gửi yêu cầu đến Amazon Bedrock và nhận phản hồi từ mô hình AI được tích hợp.
 - giao diện người dùng, phần xử lý phía máy chủ, cơ sở dữ liệu và dịch vụ AI được kết nối thông qua các dịch vụ AWS.
 
-Các tiêu chí trên mô tả kết quả và phạm vi chức năng của dự án. Ảnh chụp bảng điều khiển AWS, mã nguồn, nhật ký và kết quả kiểm thử cụ thể được trình bày trong phần Thực hành/Minh chứng, không lặp lại trong Bản đề xuất.
-
 # 2. Kiến trúc giải pháp
 
 ## 2.1. Tổng quan kiến trúc
@@ -90,7 +88,6 @@ Các cơ chế giám sát, cảnh báo, sao lưu và tối ưu hiệu suất s�
 
 # 3. Thiết kế bảo mật
 
-Bảo mật được xem xét xuyên suốt quá trình thiết kế và triển khai. Các nguyên tắc dưới đây là yêu cầu thiết kế; trạng thái cấu hình thực tế cần được đối chiếu với tài khoản AWS trước khi mô tả là đã hoàn tất.
 
 ## 3.1. Quản lý danh tính và quyền truy cập
 
@@ -161,7 +158,6 @@ Amazon CloudWatch có thể được sử dụng để theo dõi nhật ký, l�
 - Chức năng AI tích hợp Amazon Bedrock với mô hình Amazon Nova Micro.
 - Tài liệu Proposal và sơ đồ kiến trúc tổng thể.
 
-Ảnh chụp bảng điều khiển AWS, mã nguồn, hướng dẫn triển khai từng bước, nhật ký và kết quả kiểm thử chi tiết thuộc tài liệu Thực hành/Minh chứng triển khai, không phải nội dung chính của Bản đề xuất.
 
 # 5. Lộ trình triển khai
 
