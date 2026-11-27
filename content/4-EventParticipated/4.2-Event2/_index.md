@@ -79,4 +79,4 @@ Workloads and AI agents should not be given broad permissions simply for conveni
 
 Learning from experienced practitioners, mentors, and AWS Community Builders provides practical perspectives beyond technical documentation. Recording and sharing these insights can also improve my understanding of cloud architecture and engineering practices.
 
-![Ảnh tham gia]()
+![Ảnh tham gia](event.png)
