@@ -1,5 +1,5 @@
 ---
-title: "Blogs Posted"
+title: "Blogs AWS"
 date: 2026-01-01
 weight: 3
 chapter: false
