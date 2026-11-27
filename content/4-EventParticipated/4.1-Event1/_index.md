@@ -1,14 +1,12 @@
 ---
-title: "Event 1"
-date: 2026-01-01
+title: "First Cloud AI Journey: Weekly Meet Up 24/10"
+date: 2026-10-24
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The content below summarizes the knowledge and experience gained from the event. Personal reflections should be adjusted to match your actual participation.
-{{% /notice %}}
+
 
 # Event Report: “First Cloud AI Journey: Weekly Meet Up 24/10”
 
@@ -89,8 +87,4 @@ The event provided an opportunity to learn about several technologies and practi
 
 Beyond the technical content, I learned to evaluate solutions from multiple perspectives, including architecture, security, performance, operability, and cost. These insights are valuable for my ongoing learning and for improving my internship project.
 
-### Event Photos
 
-*Add your event photos here.*
-
-> Overall, the Weekly Meet Up helped me explore emerging developments in the AWS ecosystem and provided practical insights for selecting and applying appropriate technologies in real-world projects.
