@@ -80,9 +80,4 @@ Workloads and AI agents should not be given broad permissions simply for conveni
 #### 3. Learn and Share Through the Community
 
 Learning from experienced practitioners, mentors, and AWS Community Builders provides practical perspectives beyond technical documentation. Recording and sharing these insights can also improve my understanding of cloud architecture and engineering practices.
-
-### Event Photos
-
-*Add your event photos here.*
-
-> Overall, AWS Cloud and AI Day Hanoi 2026 provided valuable perspectives on the development of cloud computing and AI in Vietnam. The sessions reinforced the importance of secure, observable, resilient, and cost-aware architectures, as well as the engineering practices required to move from prototypes to reliable production systems.
+.
