@@ -6,9 +6,7 @@ chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Nội dung dưới đây được viết lại nhằm tổng hợp những kiến thức và trải nghiệm thu nhận từ sự kiện. Bạn nên điều chỉnh phần cảm nhận cho phù hợp với trải nghiệm thực tế của mình.
-{{% /notice %}}
+
 
 # Báo cáo tham gia sự kiện “First Cloud AI Journey: Weekly Meet Up 24/10”
 
