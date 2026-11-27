@@ -20,9 +20,9 @@ pre: " <b> 4. </b> "
 ---
 
 ### [Event 2](4.2-Event2/)  
-&emsp;**Event Name:** GenAI-powered App-DB Modernization workshop  
+&emsp;**Event Name:** First Cloud AI Journey: Weekly Meet Up 24/10 
 
-&emsp;**Date & Time:** 09:00, August 13, 2026  
+&emsp;**Date & Time:** 09:00, October 24, 2026    
 
 &emsp;**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City  
 
