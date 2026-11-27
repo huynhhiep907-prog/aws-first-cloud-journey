@@ -1,7 +1,7 @@
 ---
 title: "AWS Cloud Mastery: Xây dựng Amazon Bedrock Agent từ Prototype đến Production"
 date: 2026-11-14
-weight: 4
+weight: 1
 chapter: false
 pre: " <b> 4.3. </b> "
 ---
