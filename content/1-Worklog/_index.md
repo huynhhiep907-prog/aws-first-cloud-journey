@@ -23,7 +23,7 @@ Typically, and as a standard, a worklog is carried out over about 3 months (thro
 
 **Week 6:** [Exploring serverless computing and AWS Lambda](1.6-Week6/)
 
-**Week 7:** [Learning API design and Amazon API Gateway–Lambda integration](1.7-Week7/)
+**Week 7:** [Learning API design and AWS API Gateway–Lambda integration](1.7-Week7/)
 
 **Week 8:** [Learning DynamoDB data modeling and database operations](1.8-Week8/)
 
@@ -32,5 +32,3 @@ Typically, and as a standard, a worklog is carried out over about 3 months (thro
 **Week 10:** [Reviewing AWS service categories and getting started with the AWS environment](1.10-Week10/)
 
 **Week 11:** [Practicing AWS Management Console, AWS CLI and basic EC2 concepts](1.11-Week11/)
-
-**Week 12:** [Practicing EC2 instance deployment, SSH connection and EBS attachment](1.12-Week12/)
