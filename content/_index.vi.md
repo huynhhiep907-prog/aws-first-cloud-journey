@@ -18,7 +18,7 @@ chapter: false
 | Vị trí thực tập | Workforce Bootcamp - First Cloud AI Journey |
 | Thời gian thực tập | Từ ngày 14/9/2026 đến ngày 14/12/2026 |
 
-![Ảnh đại diện của bạn](/images/avatar.png)
+![Ảnh đại diện của bạn](image.png)
 
 
 
