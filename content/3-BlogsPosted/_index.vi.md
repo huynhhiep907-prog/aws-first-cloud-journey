@@ -1,5 +1,5 @@
 ---
-title: "Các bài blogs đã đăng"
+title: "Blog Kỹ Thuật AWS"
 date: 2026-01-01
 weight: 3
 chapter: false
