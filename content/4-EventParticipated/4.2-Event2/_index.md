@@ -86,3 +86,6 @@ pre: " <b> 4.2. </b> "
 The event provided an opportunity to learn about several technologies and practices used in real-world environments, ranging from Voice AI and multi-account resource management to automated security testing and production AI Agents. The examples and demonstrations helped me better understand how AWS services and tools can work together to address practical business and engineering challenges.
 
 Beyond the technical content, I learned to evaluate solutions from multiple perspectives, including architecture, security, performance, operability, and cost. These insights are valuable for my ongoing learning and for improving my internship project.
+
+
+![Event Image](event2.png)
