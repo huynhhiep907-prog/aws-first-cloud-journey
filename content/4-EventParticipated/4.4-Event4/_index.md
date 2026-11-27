@@ -55,3 +55,6 @@ Dr. Werner described five important characteristics that engineers should develo
 2. **Take Responsibility for AI-Assisted Development:** When using AI coding assistants in projects, developers must carefully review generated code, test its behavior, identify potential security issues, and understand what they are deploying. AI can support implementation, but responsibility for the final product remains with the engineer.
 
 3. **Improve Communication and Think Beyond Individual Components:** I gained a better understanding of why technical decisions should be connected to business objectives. Developing systems thinking and communicating architectural trade-offs clearly are essential skills. I also recognize the value of sharing technical knowledge and experiences with other members of the AWS First Cloud Journey community.
+
+
+![Event Image](event4.png)
