@@ -77,4 +77,4 @@ Several important components and architectural concepts were introduced:
 
 3. **Continuous Learning Through the AWS Community:** Attending specialized technical sessions at the AWS office provided valuable opportunities to explore emerging AWS services, understand practical implementation approaches, and gain architectural knowledge from experienced speakers and community members.
 
-![Event Image](
+![Event Image](event3.png)
