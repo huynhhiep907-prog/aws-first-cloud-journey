@@ -76,3 +76,5 @@ Several important components and architectural concepts were introduced:
 2. **Understanding the Complete Architecture:** The session helped me gain a broader perspective on combining **Amazon Bedrock AgentCore** with Multi-AZ VPC infrastructure. This combination provides important foundations for building highly available and scalable AI systems capable of supporting large numbers of agents, tools, and tasks.
 
 3. **Continuous Learning Through the AWS Community:** Attending specialized technical sessions at the AWS office provided valuable opportunities to explore emerging AWS services, understand practical implementation approaches, and gain architectural knowledge from experienced speakers and community members.
+
+![Event Image](
