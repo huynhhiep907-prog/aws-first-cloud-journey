@@ -97,12 +97,4 @@ Sau khi nâng cấp kiến trúc từ mô hình Web Scale cơ bản lên **Read-
 
 ---
 
-## Tác giả
 
-<div style="display: flex; align-items: flex-start; margin-bottom: 30px; padding: 20px; border: 1px solid #ddd; border-radius: 5px;">
-  <img src="/images/avatar.png" alt="Tác giả" style="width: 150px; height: 150px; object-fit: cover; margin-right: 20px; border-radius: 5px;">
-  <div>
-    <h3 style="margin-top: 0;">AWS First Cloud Journey Intern</h3>
-    <p>Sinh viên thực tập chương trình AWS First Cloud Journey (FCJ), đam mê kiến trúc hệ thống phân tán, tối ưu hiệu năng và chia sẻ kinh nghiệm thực hành triển khai thực tế trên nền tảng điện toán đám mây AWS.</p>
-  </div>
-</div>
