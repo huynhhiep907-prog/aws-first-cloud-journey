@@ -1,5 +1,5 @@
 ---
-title: "Event 1"
+title: "First Cloud AI Journey: Weekly Meet Up 24/10"
 date: 2026-01-01
 weight: 1
 chapter: false
