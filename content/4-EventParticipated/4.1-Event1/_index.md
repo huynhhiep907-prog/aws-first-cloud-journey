@@ -7,120 +7,90 @@ pre: " <b> 4.1. </b> "
 ---
 
 {{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
+⚠️ **Note:** The content below summarizes the knowledge and experience gained from the event. Personal reflections should be adjusted to match your actual participation.
 {{% /notice %}}
 
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+# Event Report: “First Cloud AI Journey: Weekly Meet Up 24/10”
 
-### Event Objectives
+### Event Information
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+- **Event name:** First Cloud AI Journey: Weekly Meet Up 24/10
+- **Date:** October 24, 2026
+- **Organizers:** AWS First Cloud Journey (FCJ) and AWS Study Group
 
-### Speakers
+### Session Highlights
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+#### 1. Building Voice AI Agents and AI-powered Recruitment Interviews
 
-### Key Highlights
+- **Speaker:** Kiet Tran – Engineer at ReAI (AWS Partner).
+- **Key topics:**
+  - Introduced different approaches to building Voice AI systems, with a focus on low latency for natural conversations (a reference target of approximately 200ms). The session compared three architectures: Cascaded (ASR → LLM → TTS), Speech-to-Speech, and Full Speech-to-Speech combined with background reasoning models.
+  - Explained the call-processing flow involving SIP Servers and Media Servers (WebRTC/UDP), together with noise cancellation and Voice Activity Detection (VAD). The presented system ran on Multi-AZ GPU infrastructure, connected through AWS PrivateLink, with an overall response time of approximately 1.8 seconds.
+  - The live demo showcased an AI recruitment assistant that could call candidates and interview them on AWS topics such as EC2, S3, EKS, RDS, and VPC. Other practical topics included preparing Vietnamese text for TTS, applying Guardrails to moderate responses, and keeping operating costs at an indicative level of around VND 3,000 per call.
 
-#### Identifying the drawbacks of legacy application architecture
+#### 2. Sharing Resources Across AWS Accounts with AWS Resource Access Manager (AWS RAM)
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+- **Speaker:** Long – AWS Study Group.
+- **Key topics:**
+  - Discussed centralized resource management in Multi-Account environments using AWS RAM. The service supports sharing more than 40 resource types, including VPC Subnets, Security Groups, and Reserved EC2 Instances, across accounts without a separate charge for the sharing operation.
+  - Explained how AWS RAM Permissions work together with IAM Policies and Service Control Policies (SCPs) in AWS Organizations to govern resource access. EventBridge and CloudTrail were also mentioned as tools for monitoring related activities.
+  - Highlighted implementation considerations for Terraform and CloudFormation, particularly the need to align Availability Zone IDs across accounts to avoid unintended data-transfer costs. The Hub-and-Spoke network model was also introduced as an approach to organizing infrastructure connectivity.
 
-#### Transitioning to modern application architecture – Microservices
+#### 3. Automated Security Testing with AWS Security Agent
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+- **Speaker:** Thinh – Engineer at Steel Solution.
+- **Key topics:**
+  - Presented three core capabilities of AWS Security Agent. Design Review evaluates Terraform infrastructure designs to identify architectural risks early; Code & Security Review integrates with GitHub/GitLab Pull Requests and CI/CD workflows; Automated Penetration Testing simulates user behavior to identify vulnerabilities and build attack graphs in SIT/UAT environments.
+  - Discussed the Shared Responsibility Model and how security responsibilities are distributed. The session also covered using an agent or extension through a private tunnel to connect to a self-hosted GitLab server, supporting security checks while protecting internal source code.
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
+#### 4. Bringing AI Agents to Production with Amazon Bedrock AgentCore
 
-#### Domain-Driven Design (DDD)
+- **Speaker:** Nguyen Son An – Leader of the AWS Student Group at HCMUTE.
+- **Key topics:**
+  - Examined challenges that arise when moving AI Agents from experimentation to production, including security, session isolation, and conversation-state management.
+  - Introduced Amazon Bedrock AgentCore through two main components:
+    - **Runtime:** Provides a serverless execution environment in which each session is isolated in its own MicroVM. The session discussed an EC2 Spot Instance-based infrastructure approach and cost optimization through CPU-based charging during execution.
+    - **Memory:** Manages information at two levels. Short-term Memory stores conversation data associated with a `sessionId` and supports session branching. Long-term Memory asynchronously extracts information to produce summaries and retain user preferences and long-term knowledge.
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
+#### 5. Improving Software Development and 24/7 Operations Automation with Kiro
 
-#### Event-Driven Architecture
+- **Speakers:** Hieu Nghi – Leader of the AWS Student Group, and Khoa – Tech Lead at ACB.
+- **Key topics:**
+  - Introduced Spec-Driven Development through the Plan → Design → Tasks workflow, helping teams clarify requirements and implementation steps before development. Safety measures were also discussed, such as masking secrets/passwords and requiring manual approval before potentially destructive infrastructure commands.
+  - Shared enterprise use cases for Kiro, including connecting it to Telegram to check and report AWS resource status every five minutes, as well as automating GitHub Code Reviews based on internal standards.
+  - Emphasized managing the Context Window carefully to use tokens efficiently and control costs when working with AI tools.
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
+### Knowledge and Lessons Gained
 
-#### Compute Evolution
+#### Architectural Thinking
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
+- Learned that AI system design requires balancing response latency, language-processing quality, scalability, and operating costs.
+- Gained a better understanding of Multi-Account infrastructure, resource sharing, and selecting suitable connectivity models for different system requirements.
 
-#### Amazon Q Developer
+#### Security Throughout the Development Lifecycle
 
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
+- Recognized the importance of introducing security checks early in the development lifecycle, from Infrastructure as Code design to Pull Request reviews.
+- Understood that security should be maintained throughout development and operations rather than being treated as a final-stage activity.
 
-### Key Takeaways
+#### Emerging AWS AI Technologies and Tools
 
-#### Design Mindset
+- Gained further insight into operating AI Agents in production with Amazon Bedrock AgentCore, particularly session and memory management.
+- Explored how Kiro can support specification-driven development, code reviews, and automation of operational tasks.
 
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
+#### Applying the Knowledge to My Internship Project
 
-#### Technical Architecture
-
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
-
-#### Modernization Strategy
-
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
-
-### Applying to Work
-
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
+- The discussion of Amazon Bedrock AgentCore helped me better understand the considerations involved in integrating AI capabilities into the Smart Kitchen project.
+- The sessions on security, monitoring, and cost optimization also provided useful ideas for reviewing and improving the way AWS services are deployed in the project.
+- The event reinforced the importance of evaluating solutions based on actual requirements, complexity, and cost instead of adopting technologies simply because they are trending.
 
 ### Event Experience
 
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
+The event provided an opportunity to learn about several technologies and practices used in real-world environments, ranging from Voice AI and multi-account resource management to automated security testing and production AI Agents. The examples and demonstrations helped me better understand how AWS services and tools can work together to address practical business and engineering challenges.
 
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
+Beyond the technical content, I learned to evaluate solutions from multiple perspectives, including architecture, security, performance, operability, and cost. These insights are valuable for my ongoing learning and for improving my internship project.
 
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
+### Event Photos
 
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
+*Add your event photos here.*
 
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
-
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
-
-#### Some event photos
-*Add your event photos here*  
-
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+> Overall, the Weekly Meet Up helped me explore emerging developments in the AWS ecosystem and provided practical insights for selecting and applying appropriate technologies in real-world projects.
