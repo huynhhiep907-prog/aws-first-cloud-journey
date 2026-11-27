@@ -76,3 +76,5 @@ Một số thành phần và khái niệm kiến trúc quan trọng được tr�
 2. **Hiểu rõ kiến trúc tổng thể của hệ thống:** Buổi chia sẻ giúp tôi có cái nhìn toàn diện hơn về việc kết hợp **Amazon Bedrock AgentCore** với hạ tầng VPC Multi-AZ. Sự kết hợp này tạo nền tảng quan trọng để xây dựng các hệ thống AI có tính sẵn sàng cao, có khả năng mở rộng và hỗ trợ số lượng lớn Agent, công cụ cũng như tác vụ.
 
 3. **Học hỏi liên tục thông qua cộng đồng AWS:** Tham gia các buổi chia sẻ chuyên sâu tại văn phòng AWS mang đến cơ hội tìm hiểu những dịch vụ AWS mới, tiếp cận các phương pháp triển khai thực tế và mở rộng kiến thức về kiến trúc hệ thống thông qua kinh nghiệm của các diễn giả và thành viên cộng đồng.
+
+![Ảnh tham gia](event3.png)
