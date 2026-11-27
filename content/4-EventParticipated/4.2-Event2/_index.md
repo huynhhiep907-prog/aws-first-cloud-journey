@@ -1,6 +1,6 @@
 ---
 title: "Event 2"
-date: 2026-01-01
+date: 2026-09-29
 weight: 1
 chapter: false
 pre: " <b> 4.2. </b> "
@@ -10,117 +10,79 @@ pre: " <b> 4.2. </b> "
 ⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
 {{% /notice %}}
 
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+# Event Report: AWS Cloud and AI Day Hanoi 2026 – Ho Chi Minh City Watch Party Hub
 
-### Event Objectives
+### Event Overview
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+- **Event Name:** AWS Cloud and AI Day Hanoi 2026 – Ho Chi Minh City Watch Party Hub
+- **Date:** September 29, 2026
+- **Participation Format:** Attended the in-person Watch Party in Ho Chi Minh City, following the livestreamed Keynotes and Developer Chats from the Hanoi venue alongside the AWS First Cloud Journey community.
+- **Organizers:** AWS Vietnam, AWS Community Builders, and AWS First Cloud Journey (FCJ).
 
-### Speakers
+### Main Topics and Insights
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+#### 1. Moving from Technology Adoption to Operational Maturity
 
-### Key Highlights
+A key message from the event was that Vietnam's cloud and AI ecosystem is moving beyond Proof-of-Concept (PoC) experiments toward operating production systems reliably, securely, and at scale.
 
-#### Identifying the drawbacks of legacy application architecture
+Production workloads require clearly assigned ownership, well-defined access boundaries, comprehensive observability, resilient infrastructure, and repeatable cost-management practices. These capabilities are essential for turning promising prototypes into dependable services.
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+#### 2. Agentic AI and the Role of Platform Engineering
 
-#### Transitioning to modern application architecture – Microservices
+Agentic AI was one of the central themes. AI systems are evolving from tools that primarily generate content into agents that can call APIs, access internal data, modify code, and initiate deployment workflows.
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+As these agents become more autonomous and development cycles accelerate, Platform Engineering provides important engineering guardrails. It helps standardize deployment processes, establish secure defaults, govern software supply chains, and define approval boundaries for actions performed by AI agents.
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
+#### 3. Workload Identity and AI Agent Security on AWS
 
-#### Domain-Driven Design (DDD)
+The Developer Chats session presented by **Kha Van**, Cloud Security Engineer and AWS Community Builder, examined an important security question: when a workload makes an AWS API request, which identity is actually being used?
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
+The discussion highlighted the growing number of non-human identities in cloud environments, including Kubernetes Pods, CI/CD pipelines, serverless functions, and AI agents. These identities need appropriate governance just as human users do.
 
-#### Event-Driven Architecture
+AWS approaches discussed included **Amazon EKS Pod Identity**, short-lived temporary credentials, fine-grained workload-level permissions, strict IAM trust policies, and runtime identity verification. These practices help avoid relying on overly broad permissions inherited from EC2 nodes and support the principle of least privilege.
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
+#### 4. AWS Infrastructure Development in Vietnam and Hybrid Architectures
 
-#### Compute Evolution
+The event highlighted AWS infrastructure developments in Vietnam, including **AWS Direct Connect in Hanoi** and the **Hanoi AWS Local Zone**.
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
+These options give organizations more flexibility for private connectivity, low-latency applications, and workloads with data locality requirements. They also create more choices when designing hybrid architectures that combine on-premises infrastructure and cloud services.
 
-#### Amazon Q Developer
+Architecture decisions should balance latency, resilience, compliance, security, and cost rather than focusing on only one factor.
 
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
+#### 5. Enterprise Transformation and Vietnam's Cloud Community
 
-### Key Takeaways
+The **TCBS Customer Story** demonstrated how AI can transform software engineering when it becomes part of everyday development activities, including writing, reviewing, testing, and delivering code. The value of AI adoption should be assessed through measurable operational improvements, not simply by adding another tool to the technology stack.
 
-#### Design Mindset
+The keynote also shared figures illustrating the growth of Vietnam's cloud and AI ecosystem:
 
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
+- More than **157,000** individuals trained in cloud and AI.
+- Over **54,000** members in the **AWS Study Group**.
+- More than **15,000** participants in the **First Cloud and AI Journey (FCJ)** ecosystem.
 
-#### Technical Architecture
+These figures reflect the increasing interest in cloud and AI knowledge among developers and technology professionals in Vietnam.
 
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
+### Ho Chi Minh City Watch Party Experience
 
-#### Modernization Strategy
+Although the main event took place in Hanoi, joining the Ho Chi Minh City Watch Party provided an opportunity to follow the sessions with fellow FCJ interns and mentors in person.
 
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
+The local gathering made it possible to exchange ideas, discuss real-world architecture decisions, and learn from other participants while watching the livestreamed sessions. It also helped strengthen connections within the Ho Chi Minh City AWS community.
 
-### Applying to Work
+### Key Takeaways and Application to My Internship
 
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
+#### 1. Adopt a Production-First Mindset
 
-### Event Experience
+A working demonstration does not automatically mean that an application is ready for production. Logging, monitoring, observability, reliability, and cost controls should be considered from the beginning of the design process.
 
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
+#### 2. Prioritize Identity-Centered Security
 
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
+Workloads and AI agents should not be given broad permissions simply for convenience. Temporary credentials, narrowly scoped IAM policies, and the principle of least privilege help reduce unnecessary security risks.
 
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
+#### 3. Learn and Share Through the Community
 
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
+Learning from experienced practitioners, mentors, and AWS Community Builders provides practical perspectives beyond technical documentation. Recording and sharing these insights can also improve my understanding of cloud architecture and engineering practices.
 
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
+### Event Photos
 
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
+*Add your event photos here.*
 
-#### Some event photos
-*Add your event photos here*  
-
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+> Overall, AWS Cloud and AI Day Hanoi 2026 provided valuable perspectives on the development of cloud computing and AI in Vietnam. The sessions reinforced the importance of secure, observable, resilient, and cost-aware architectures, as well as the engineering practices required to move from prototypes to reliable production systems.
