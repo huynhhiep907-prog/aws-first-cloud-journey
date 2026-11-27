@@ -243,9 +243,9 @@ This estimate is intended to illustrate the potential operating costs when the a
 
 | Member | Role | Responsibilities |
 |---|---|---|
-| Huỳnh Minh Hiệp | Frontend Developer & UI/UX Designer | Design and develop the website interface; build food search and filtering features, display recipes, and connect the frontend to the backend. |
-| Nguyễn Nguyên Vũ | Backend Developer | Develop the backend using AWS Lambda and API Gateway; build APIs, implement search and recipe recommendation logic, and integrate Amazon Bedrock to support the AI chatbot. |
-| Nguyễn Mạnh Dũng | AWS Cloud Engineer & Database Developer | Configure and deploy AWS services such as S3, CloudFront, DynamoDB, Amazon Location Service, and CloudWatch; manage recipe data and support system testing and operations. |
+| Huỳnh&nbsp;Minh&nbsp;Hiệp | Frontend Developer & UI/UX Designer | Design and develop the website interface; build food search and filtering features, display recipes, and connect the frontend to the backend. |
+| Nguyễn&nbsp;Nguyên&nbsp;Vũ | Backend Developer | Develop the backend using AWS Lambda and API Gateway; build APIs, implement search and recipe recommendation logic, and integrate Amazon Bedrock to support the AI chatbot. |
+| Nguyễn&nbsp;Mạnh&nbsp;Dũng | AWS Cloud Engineer & Database Developer | Configure and deploy AWS services such as S3, CloudFront, DynamoDB, Amazon Location Service, and CloudWatch; manage recipe data and support system testing and operations. |
 
 ## 7.2. Risk Assessment and Mitigation
 
