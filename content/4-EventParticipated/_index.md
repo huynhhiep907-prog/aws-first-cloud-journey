@@ -38,3 +38,15 @@ pre: " <b> 4. </b> "
 &emsp;**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City  
 
 &emsp;**Role:** Attendee  
+
+---
+
+### [Event 4](4.4-Event4/)  
+&emsp;**Event Name:** First Cloud AI Journey: Weekly Meet Up 14/11 
+
+&emsp;**Date & Time:** 09:00, November 14, 2026    
+
+&emsp;**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City  
+
+&emsp;**Role:** Attendee  
+
