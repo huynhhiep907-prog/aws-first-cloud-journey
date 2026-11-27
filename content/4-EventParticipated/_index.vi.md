@@ -38,3 +38,13 @@ pre: " <b> 4. </b> "
 
 &emsp;**Vai trò trong sự kiện:** Người tham dự 
 
+---
+
+### [Event 4](4.4-Event4/)
+&emsp;**Tên sự kiện:** First Cloud AI Journey: Weekly Meet Up 14/11
+
+&emsp;**Thời gian:** 09:00 ngày 02/10/2026
+
+&emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, thành phố Hồ Chí Minh
+
+&emsp;**Vai trò trong sự kiện:** Người tham dự 
