@@ -42,9 +42,9 @@ pre: " <b> 4. </b> "
 ---
 
 ### [Event 4](4.4-Event4/)  
-&emsp;**Event Name:** First Cloud AI Journey: Weekly Meet Up 14/11 
+&emsp;**Event Name:** Chat with Dr. Werner 
 
-&emsp;**Date & Time:** 09:00, November 14, 2026    
+&emsp;**Date & Time:** 09:00, October 02, 2026    
 
 &emsp;**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City  
 
