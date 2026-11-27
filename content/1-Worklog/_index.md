@@ -7,28 +7,26 @@ pre: " <b> 1. </b> "
 ---
 
 
-**On this page**, you will need to introduce your worklog. **How** did you complete it? How many weeks did you take to complete the program? **What** did you do in those weeks?
+**On this page**, you will find an overview of the work completed during the FCAJ program. The worklog covers 11 weeks, from the initial program onboarding and AWS fundamentals to the implementation and review of the Bếp Thông Minh workshop.
 
-Typically, and as a standard, a worklog is carried out over about 3 months (throughout the internship period) with weekly contents as follows:
+**Week 1:** [Getting familiar with FCAJ, understanding the program requirements and forming the project team](1.1-Week1/)
 
-**Week 1:** [Getting familiar with FCAJ and forming the project team](1.1-Week1/)
+**Week 2:** [Learning cloud computing, AWS service categories, global infrastructure, IAM and secure access](1.2-Week2/)
 
-**Week 2:** [Learning cloud computing, AWS services, IAM and account security](1.2-Week2/)
+**Week 3:** [Learning AWS networking fundamentals, Amazon VPC, EC2 instances and EBS storage](1.3-Week3/)
 
-**Week 3:** [Exploring VPC networking, EC2 instances and EBS storage](1.3-Week3/)
+**Week 4:** [Learning Amazon S3 object storage, access control, versioning and data protection](1.4-Week4/)
 
-**Week 4:** [Learning Amazon S3 storage, access control and data protection](1.4-Week4/)
+**Week 5:** [Learning CloudFront content delivery, caching, DNS, HTTPS and website troubleshooting](1.5-Week5/)
 
-**Week 5:** [Learning CloudFront CDN, caching, DNS and HTTPS](1.5-Week5/)
+**Week 6:** [Learning serverless computing, AWS Lambda functions, execution roles and monitoring](1.6-Week6/)
 
-**Week 6:** [Exploring serverless computing and AWS Lambda](1.6-Week6/)
+**Week 7:** [Learning REST API concepts and integrating Amazon API Gateway with AWS Lambda](1.7-Week7/)
 
-**Week 7:** [Learning API design and AWS API Gateway–Lambda integration](1.7-Week7/)
+**Week 8:** [Learning DynamoDB data modeling, query operations, indexes and access through Boto3](1.8-Week8/)
 
-**Week 8:** [Learning DynamoDB data modeling and database operations](1.8-Week8/)
+**Week 9:** [Exploring Amazon Location Service, CloudWatch monitoring, AWS security and cost management](1.9-Week9/)
 
-**Week 9:** [Exploring Amazon Location Service, CloudWatch monitoring and AWS cost estimation](1.9-Week9/)
+**Week 10:** [Starting the Bếp Thông Minh workshop and reviewing its scope, frontend, backend and AWS deployment](1.10-Week10/)
 
-**Week 10:** [Reviewing AWS service categories and getting started with the AWS environment](1.10-Week10/)
-
-**Week 11:** [Practicing AWS Management Console, AWS CLI and basic EC2 concepts](1.11-Week11/)
+**Week 11:** [Testing Bếp Thông Minh features and completing the proposal, architecture diagram and AWS cost estimates](1.11-Week11/)
