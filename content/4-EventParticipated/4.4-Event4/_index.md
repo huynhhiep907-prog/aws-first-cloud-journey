@@ -1,5 +1,5 @@
 ---
-title: "Fireside Chat with Dr. Werner: Navigating the Future of Cloud & AI in Vietnam"
+title: "Chat with Dr. Werner"
 date: 2026-10-02
 weight: 1
 chapter: false
