@@ -1,125 +1,83 @@
 ---
-title: "Event 2"
-date: 2026-01-01
+title: "AWS Cloud and AI Day Hanoi 2026 – Ho Chi Minh City Watch Party Hub"
+date: 2026-09-29
 weight: 1
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+# Bài thu hoạch sự kiện: AWS Cloud and AI Day Hanoi 2026 – Ho Chi Minh City Watch Party Hub
 
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+### Tổng quan sự kiện
 
-### Mục Đích Của Sự Kiện
+- **Tên sự kiện:** AWS Cloud and AI Day Hanoi 2026 – Ho Chi Minh City Watch Party Hub
+- **Thời gian:** Ngày 29 tháng 9 năm 2026
+- **Hình thức tham gia:** Tham gia trực tiếp buổi Watch Party tại Thành phố Hồ Chí Minh, theo dõi các phiên Keynote và Developer Chats được phát trực tiếp từ địa điểm tổ chức tại Hà Nội cùng cộng đồng AWS First Cloud Journey.
+- **Đơn vị tổ chức:** AWS Vietnam, AWS Community Builders và AWS First Cloud Journey (FCJ).
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+### Các chủ đề và nội dung nổi bật
 
-### Danh Sách Diễn Giả
+#### 1. Từ ứng dụng công nghệ đến vận hành hệ thống ở quy mô thực tế
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+Một thông điệp quan trọng của sự kiện là hệ sinh thái Cloud và AI tại Việt Nam đang dần chuyển từ giai đoạn thử nghiệm Proof-of-Concept (PoC) sang việc vận hành các hệ thống thực tế một cách ổn định, an toàn và có khả năng mở rộng.
 
-### Nội Dung Nổi Bật
+Để triển khai workload trong môi trường production, tổ chức cần xác định rõ trách nhiệm vận hành, phân quyền truy cập hợp lý, xây dựng hệ thống observability toàn diện, đảm bảo hạ tầng có khả năng phục hồi và duy trì quy trình quản lý chi phí có thể lặp lại. Đây là những yếu tố cần thiết để biến các bản thử nghiệm tiềm năng thành dịch vụ đáng tin cậy.
 
-#### Đưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng cũ
+#### 2. Agentic AI và vai trò của Platform Engineering
 
-- Thời gian release sản phẩm lâu → Mất doanh thu/bỏ lỡ cơ hội
-- Hoạt động kém hiệu quả → Mất năng suất, tốn kém chi phí
-- Không tuân thủ các quy định về bảo mật → Mất an ninh, uy tín
+Agentic AI là một trong những chủ đề trọng tâm của sự kiện. Các hệ thống AI đang phát triển từ những công cụ chủ yếu tạo nội dung thành các agent có khả năng gọi API, truy cập dữ liệu nội bộ, chỉnh sửa mã nguồn và khởi chạy quy trình triển khai.
 
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
+Khi các agent ngày càng tự chủ và chu kỳ phát triển phần mềm được rút ngắn, Platform Engineering đóng vai trò tạo ra những ranh giới kiểm soát cần thiết. Cách tiếp cận này giúp chuẩn hóa quy trình triển khai, thiết lập cấu hình bảo mật mặc định, quản lý chuỗi cung ứng phần mềm và xác định những hành động mà AI agent được phép thực hiện hoặc cần có sự phê duyệt.
 
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
+#### 3. Định danh workload và bảo mật AI agent trên AWS
 
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
+Phiên Developer Chats do **Kha Van**, Cloud Security Engineer và AWS Community Builder, trình bày đã đề cập đến một câu hỏi bảo mật quan trọng: khi một workload gửi yêu cầu đến AWS API, danh tính nào thực sự được sử dụng?
 
-#### Domain-Driven Design (DDD)
+Nội dung thảo luận nhấn mạnh sự gia tăng của các danh tính phi con người trong môi trường cloud, bao gồm Kubernetes Pods, pipeline CI/CD, serverless functions và AI agents. Những danh tính này cũng cần được quản lý và kiểm soát chặt chẽ như tài khoản người dùng thông thường.
 
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
+Các giải pháp AWS được đề cập bao gồm **Amazon EKS Pod Identity**, thông tin xác thực tạm thời có thời hạn ngắn, quyền truy cập chi tiết ở cấp workload, IAM trust policies nghiêm ngặt và xác minh danh tính tại thời điểm chạy. Những phương pháp này giúp tránh việc workload kế thừa các quyền quá rộng từ EC2 node, đồng thời hỗ trợ nguyên tắc đặc quyền tối thiểu (least privilege).
 
-#### Event-Driven Architecture
+#### 4. Phát triển hạ tầng AWS tại Việt Nam và kiến trúc Hybrid
 
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
+Sự kiện cũng cập nhật những bước phát triển hạ tầng AWS tại Việt Nam, trong đó có **AWS Direct Connect tại Hà Nội** và **Hanoi AWS Local Zone**.
 
-#### Compute Evolution
+Các lựa chọn này mang đến cho doanh nghiệp sự linh hoạt hơn trong kết nối riêng tư, triển khai ứng dụng yêu cầu độ trễ thấp và xử lý workload có yêu cầu về vị trí lưu trữ dữ liệu. Đồng thời, chúng mở rộng các phương án thiết kế kiến trúc hybrid, kết hợp hạ tầng tại chỗ (on-premises) với dịch vụ cloud.
 
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
+Khi đưa ra quyết định kiến trúc, cần cân bằng giữa độ trễ, khả năng phục hồi, yêu cầu tuân thủ, bảo mật và chi phí thay vì chỉ tập trung vào một yếu tố riêng lẻ.
 
-#### Amazon Q Developer
+#### 5. Chuyển đổi doanh nghiệp và cộng đồng Cloud tại Việt Nam
 
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
+**Câu chuyện khách hàng TCBS (TCBS Customer Story)** cho thấy AI có thể hỗ trợ chuyển đổi quy trình phát triển phần mềm khi được tích hợp vào các hoạt động hằng ngày như viết mã, review, kiểm thử và phát hành phần mềm. Hiệu quả ứng dụng AI nên được đánh giá thông qua những cải thiện có thể đo lường trong hoạt động thực tế, thay vì chỉ đơn giản bổ sung thêm một công cụ vào hệ thống công nghệ.
 
-### Những Gì Học Được
+Bài keynote cũng chia sẻ các số liệu thể hiện sự phát triển của hệ sinh thái Cloud và AI tại Việt Nam:
 
-#### Tư Duy Thiết Kế
+- Hơn **157.000** người đã được đào tạo về Cloud và AI.
+- Hơn **54.000** thành viên trong cộng đồng **AWS Study Group**.
+- Hơn **15.000** người tham gia hệ sinh thái **First Cloud and AI Journey (FCJ)**.
 
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
+Những con số này phản ánh sự quan tâm ngày càng tăng đối với kiến thức Cloud và AI của cộng đồng lập trình viên và nhân sự công nghệ tại Việt Nam.
 
-#### Kiến Trúc Kỹ Thuật
+### Trải nghiệm tại Ho Chi Minh City Watch Party
 
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
+Mặc dù sự kiện chính được tổ chức tại Hà Nội, việc tham gia Watch Party tại Thành phố Hồ Chí Minh giúp tôi có cơ hội theo dõi các phiên chia sẻ trực tiếp cùng các thực tập sinh và mentor trong cộng đồng FCJ.
 
-#### Chiến Lược Hiện Đại Hóa
+Buổi gặp mặt tại địa phương tạo điều kiện để mọi người trao đổi ý tưởng, thảo luận về các quyết định thiết kế kiến trúc trong thực tế và học hỏi lẫn nhau trong lúc theo dõi livestream. Đây cũng là dịp giúp tôi kết nối gần hơn với cộng đồng AWS tại Thành phố Hồ Chí Minh.
 
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
+### Những kiến thức rút ra và cách áp dụng vào kỳ thực tập
 
-### Ứng Dụng Vào Công Việc
+#### 1. Hình thành tư duy ưu tiên môi trường Production
 
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
+Một bản demo hoạt động được không đồng nghĩa với việc ứng dụng đã sẵn sàng triển khai trong môi trường production. Logging, monitoring, observability, độ tin cậy và kiểm soát chi phí cần được cân nhắc ngay từ giai đoạn thiết kế ban đầu.
 
-### Trải nghiệm trong event
+#### 2. Ưu tiên bảo mật dựa trên danh tính
 
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
+Không nên cấp quyền truy cập quá rộng cho workload hoặc AI agent chỉ vì sự tiện lợi. Việc sử dụng thông tin xác thực tạm thời, IAM policies giới hạn đúng phạm vi và tuân thủ nguyên tắc đặc quyền tối thiểu giúp giảm thiểu các rủi ro bảo mật không cần thiết.
 
-#### Học hỏi từ các diễn giả có chuyên môn cao
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
+#### 3. Học hỏi và chia sẻ thông qua cộng đồng
 
-#### Trải nghiệm kỹ thuật thực tế
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
+Việc học hỏi từ những người có kinh nghiệm thực tế, mentor và AWS Community Builders mang lại góc nhìn ứng dụng vượt ra ngoài tài liệu kỹ thuật. Ghi lại và chia sẻ những kiến thức này cũng giúp tôi củng cố hiểu biết về kiến trúc cloud và các phương pháp kỹ thuật phần mềm.
 
-#### Ứng dụng công cụ hiện đại
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
+### Hình ảnh sự kiện
 
-#### Kết nối và trao đổi
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
+*Thêm hình ảnh ghi lại quá trình tham gia sự kiện tại đây.*
 
-#### Bài học rút ra
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
-
-#### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
