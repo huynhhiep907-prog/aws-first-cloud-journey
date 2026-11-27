@@ -1,82 +1,84 @@
 ---
-title: "AWS Cloud and AI Day Hanoi 2026 – Ho Chi Minh City Watch Party Hub"
-date: 2026-09-29
+title: "First Cloud AI Journey: Weekly Meet Up 24/10"
+date: 2026-10-24
 weight: 1
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-# Bài thu hoạch sự kiện: AWS Cloud and AI Day Hanoi 2026 – Ho Chi Minh City Watch Party Hub
+# Báo cáo tham gia sự kiện “First Cloud AI Journey: Weekly Meet Up 24/10”
 
-### Tổng quan sự kiện
+### Thông tin chung về sự kiện
 
-- **Tên sự kiện:** AWS Cloud and AI Day Hanoi 2026 – Ho Chi Minh City Watch Party Hub
-- **Thời gian:** Ngày 29 tháng 9 năm 2026
-- **Hình thức tham gia:** Tham gia trực tiếp buổi Watch Party tại Thành phố Hồ Chí Minh, theo dõi các phiên Keynote và Developer Chats được phát trực tiếp từ địa điểm tổ chức tại Hà Nội cùng cộng đồng AWS First Cloud Journey.
-- **Đơn vị tổ chức:** AWS Vietnam, AWS Community Builders và AWS First Cloud Journey (FCJ).
+- **Tên sự kiện:** First Cloud AI Journey: Weekly Meet Up 24/10
+- **Thời gian:** Ngày 24/10/2026
+- **Đơn vị tổ chức:** AWS First Cloud Journey (FCJ) và AWS Study Group
 
-### Các chủ đề và nội dung nổi bật
+### Nội dung các phiên chia sẻ
 
-#### 1. Từ ứng dụng công nghệ đến vận hành hệ thống ở quy mô thực tế
+#### 1. Phát triển Voice AI Agent và ứng dụng AI trong phỏng vấn tuyển dụng
 
-Một thông điệp quan trọng của sự kiện là hệ sinh thái Cloud và AI tại Việt Nam đang dần chuyển từ giai đoạn thử nghiệm Proof-of-Concept (PoC) sang việc vận hành các hệ thống thực tế một cách ổn định, an toàn và có khả năng mở rộng.
+- **Diễn giả:** Anh Kiệt Trần – Engineer tại ReAI (AWS Partner).
+- **Nội dung chính:**
+  - Giới thiệu những hướng tiếp cận khi xây dựng hệ thống Voice AI, trong đó tập trung vào yêu cầu độ trễ thấp để duy trì hội thoại tự nhiên (mốc tham chiếu khoảng 200ms). Ba kiến trúc được phân tích gồm Cascaded (ASR → LLM → TTS), Speech-to-Speech và Full Speech-to-Speech kết hợp mô hình suy luận chạy nền.
+  - Mô tả luồng xử lý cuộc gọi qua SIP Server và Media Server (WebRTC/UDP), kết hợp khử nhiễu (Noise Canceller) và phát hiện thời điểm kết thúc lời nói (VAD). Hệ thống được triển khai trên hạ tầng GPU Multi-AZ, kết nối bằng AWS PrivateLink và có thời gian phản hồi tổng thể được chia sẻ khoảng 1,8 giây.
+  - Phần Live Demo trình diễn trợ lý tuyển dụng AI có thể gọi điện và phỏng vấn ứng viên về EC2, S3, EKS, RDS và VPC. Phiên này cũng đề cập đến việc chuẩn hóa văn bản tiếng Việt cho TTS, sử dụng Guardrails để kiểm soát nội dung và tối ưu chi phí vận hành ở mức tham khảo khoảng 3.000 đồng mỗi cuộc gọi.
 
-Để triển khai workload trong môi trường production, tổ chức cần xác định rõ trách nhiệm vận hành, phân quyền truy cập hợp lý, xây dựng hệ thống observability toàn diện, đảm bảo hạ tầng có khả năng phục hồi và duy trì quy trình quản lý chi phí có thể lặp lại. Đây là những yếu tố cần thiết để biến các bản thử nghiệm tiềm năng thành dịch vụ đáng tin cậy.
+#### 2. Chia sẻ tài nguyên đa tài khoản với AWS Resource Access Manager (AWS RAM)
 
-#### 2. Agentic AI và vai trò của Platform Engineering
+- **Diễn giả:** Anh Long – AWS Study Group.
+- **Nội dung chính:**
+  - Trình bày cách quản lý tài nguyên tập trung trong môi trường Multi-Account bằng AWS RAM. Dịch vụ hỗ trợ chia sẻ hơn 40 loại tài nguyên, ví dụ VPC Subnets, Security Groups và Reserved EC2 Instances, giữa các tài khoản mà không tính phí riêng cho thao tác chia sẻ.
+  - Làm rõ sự phối hợp giữa AWS RAM Permissions, IAM Policy và Service Control Policies (SCP) thuộc AWS Organizations để kiểm soát quyền sử dụng tài nguyên. EventBridge và CloudTrail cũng được đề cập trong việc theo dõi, giám sát các hoạt động liên quan.
+  - Chia sẻ một số lưu ý khi triển khai bằng Terraform hoặc CloudFormation, đặc biệt là việc đồng bộ Availability Zone ID giữa các tài khoản nhằm hạn chế chi phí truyền dữ liệu không mong muốn. Mô hình mạng Hub-and-Spoke được giới thiệu như một cách tổ chức kết nối giữa các thành phần hạ tầng.
 
-Agentic AI là một trong những chủ đề trọng tâm của sự kiện. Các hệ thống AI đang phát triển từ những công cụ chủ yếu tạo nội dung thành các agent có khả năng gọi API, truy cập dữ liệu nội bộ, chỉnh sửa mã nguồn và khởi chạy quy trình triển khai.
+#### 3. Tự động kiểm tra bảo mật với AWS Security Agent
 
-Khi các agent ngày càng tự chủ và chu kỳ phát triển phần mềm được rút ngắn, Platform Engineering đóng vai trò tạo ra những ranh giới kiểm soát cần thiết. Cách tiếp cận này giúp chuẩn hóa quy trình triển khai, thiết lập cấu hình bảo mật mặc định, quản lý chuỗi cung ứng phần mềm và xác định những hành động mà AI agent được phép thực hiện hoặc cần có sự phê duyệt.
+- **Diễn giả:** Anh Thịnh – Engineer tại Steel Solution.
+- **Nội dung chính:**
+  - Giới thiệu ba nhóm chức năng của AWS Security Agent. Design Review hỗ trợ rà soát thiết kế hạ tầng Terraform để nhận diện rủi ro từ sớm; Code & Security Review tích hợp vào Pull Request trên GitHub/GitLab và quy trình CI/CD; Automated Penetration Testing mô phỏng hành vi người dùng để tìm lỗ hổng và xây dựng đồ thị tấn công trong môi trường SIT/UAT.
+  - Thảo luận về Shared Responsibility Model và cách phân chia trách nhiệm bảo mật giữa các bên. Bên cạnh đó, phiên chia sẻ đề cập đến phương án sử dụng agent hoặc extension kết nối qua đường hầm riêng tư đến máy chủ GitLab self-hosted, giúp hỗ trợ kiểm tra mà vẫn bảo vệ mã nguồn nội bộ.
 
-#### 3. Định danh workload và bảo mật AI agent trên AWS
+#### 4. Đưa AI Agent vào môi trường Production với Amazon Bedrock AgentCore
 
-Phiên Developer Chats do **Kha Van**, Cloud Security Engineer và AWS Community Builder, trình bày đã đề cập đến một câu hỏi bảo mật quan trọng: khi một workload gửi yêu cầu đến AWS API, danh tính nào thực sự được sử dụng?
+- **Diễn giả:** Anh Nguyễn Sơn An – Leader AWS Student Group tại HCMUTE.
+- **Nội dung chính:**
+  - Phân tích các vấn đề cần quan tâm khi chuyển AI Agent từ giai đoạn thử nghiệm sang vận hành thực tế, chẳng hạn như bảo mật, cô lập phiên làm việc và quản lý trạng thái hội thoại.
+  - Giới thiệu Amazon Bedrock AgentCore với hai thành phần được tập trung trình bày:
+    - **Runtime:** Cung cấp môi trường thực thi serverless, trong đó mỗi phiên được cô lập trong một MicroVM riêng biệt. Phiên chia sẻ đề cập đến nền tảng EC2 Spot Instance và cách tối ưu chi phí thông qua việc tính phí CPU trong thời gian thực thi.
+    - **Memory:** Quản lý thông tin theo hai phạm vi. Short-term Memory lưu nội dung hội thoại theo `sessionId` và hỗ trợ phân nhánh phiên; Long-term Memory trích xuất thông tin bất đồng bộ để tạo bản tóm tắt, ghi nhận sở thích và lưu trữ tri thức dài hạn.
 
-Nội dung thảo luận nhấn mạnh sự gia tăng của các danh tính phi con người trong môi trường cloud, bao gồm Kubernetes Pods, pipeline CI/CD, serverless functions và AI agents. Những danh tính này cũng cần được quản lý và kiểm soát chặt chẽ như tài khoản người dùng thông thường.
+#### 5. Tối ưu phát triển phần mềm và tự động hóa vận hành với Kiro
 
-Các giải pháp AWS được đề cập bao gồm **Amazon EKS Pod Identity**, thông tin xác thực tạm thời có thời hạn ngắn, quyền truy cập chi tiết ở cấp workload, IAM trust policies nghiêm ngặt và xác minh danh tính tại thời điểm chạy. Những phương pháp này giúp tránh việc workload kế thừa các quyền quá rộng từ EC2 node, đồng thời hỗ trợ nguyên tắc đặc quyền tối thiểu (least privilege).
+- **Diễn giả:** Anh Hiếu Nghị – Leader AWS Student Group và anh Khoa – Tech Lead tại ACB.
+- **Nội dung chính:**
+  - Giới thiệu phương pháp Spec-Driven Development theo trình tự Plan → Design → Tasks, giúp làm rõ yêu cầu và kế hoạch trước khi triển khai. Các biện pháp an toàn cũng được đề cập, bao gồm che giấu secrets/passwords và yêu cầu phê duyệt thủ công trước những thao tác có thể xóa hạ tầng.
+  - Chia sẻ cách ứng dụng Kiro trong môi trường doanh nghiệp, chẳng hạn kết nối Telegram để kiểm tra và thông báo tình trạng tài nguyên AWS định kỳ mỗi 5 phút, cũng như tự động hỗ trợ Code Review trên GitHub theo bộ tiêu chuẩn nội bộ.
+  - Nhấn mạnh việc kiểm soát Context Window để sử dụng token hợp lý, góp phần tối ưu hiệu quả và chi phí khi làm việc với công cụ AI.
 
-#### 4. Phát triển hạ tầng AWS tại Việt Nam và kiến trúc Hybrid
+### Kiến thức và kinh nghiệm thu nhận
 
-Sự kiện cũng cập nhật những bước phát triển hạ tầng AWS tại Việt Nam, trong đó có **AWS Direct Connect tại Hà Nội** và **Hanoi AWS Local Zone**.
+#### Tư duy thiết kế kiến trúc
 
-Các lựa chọn này mang đến cho doanh nghiệp sự linh hoạt hơn trong kết nối riêng tư, triển khai ứng dụng yêu cầu độ trễ thấp và xử lý workload có yêu cầu về vị trí lưu trữ dữ liệu. Đồng thời, chúng mở rộng các phương án thiết kế kiến trúc hybrid, kết hợp hạ tầng tại chỗ (on-premises) với dịch vụ cloud.
+- Nhận thấy việc xây dựng hệ thống AI cần cân bằng giữa tốc độ phản hồi, chất lượng xử lý ngôn ngữ, khả năng mở rộng và chi phí vận hành.
+- Hiểu thêm về cách tổ chức hạ tầng Multi-Account, chia sẻ tài nguyên và lựa chọn mô hình kết nối phù hợp với quy mô hệ thống.
 
-Khi đưa ra quyết định kiến trúc, cần cân bằng giữa độ trễ, khả năng phục hồi, yêu cầu tuân thủ, bảo mật và chi phí thay vì chỉ tập trung vào một yếu tố riêng lẻ.
+#### Bảo mật trong quy trình phát triển
 
-#### 5. Chuyển đổi doanh nghiệp và cộng đồng Cloud tại Việt Nam
+- Nhận thức rõ hơn về việc đưa hoạt động kiểm tra bảo mật vào sớm trong vòng đời phát triển, từ bước thiết kế Infrastructure as Code đến kiểm duyệt Pull Request.
+- Hiểu rằng bảo mật cần được duy trì xuyên suốt quá trình phát triển và vận hành, thay vì chỉ thực hiện ở giai đoạn cuối.
 
-**Câu chuyện khách hàng TCBS (TCBS Customer Story)** cho thấy AI có thể hỗ trợ chuyển đổi quy trình phát triển phần mềm khi được tích hợp vào các hoạt động hằng ngày như viết mã, review, kiểm thử và phát hành phần mềm. Hiệu quả ứng dụng AI nên được đánh giá thông qua những cải thiện có thể đo lường trong hoạt động thực tế, thay vì chỉ đơn giản bổ sung thêm một công cụ vào hệ thống công nghệ.
+#### Công nghệ AI và công cụ AWS mới
 
-Bài keynote cũng chia sẻ các số liệu thể hiện sự phát triển của hệ sinh thái Cloud và AI tại Việt Nam:
+- Có thêm góc nhìn về việc vận hành AI Agent trong môi trường Production thông qua Amazon Bedrock AgentCore, đặc biệt là quản lý phiên và bộ nhớ.
+- Tìm hiểu cách Kiro hỗ trợ quy trình phát triển theo đặc tả, rà soát mã nguồn và tự động hóa các tác vụ vận hành.
 
-- Hơn **157.000** người đã được đào tạo về Cloud và AI.
-- Hơn **54.000** thành viên trong cộng đồng **AWS Study Group**.
-- Hơn **15.000** người tham gia hệ sinh thái **First Cloud and AI Journey (FCJ)**.
+#### Liên hệ với dự án thực tập
 
-Những con số này phản ánh sự quan tâm ngày càng tăng đối với kiến thức Cloud và AI của cộng đồng lập trình viên và nhân sự công nghệ tại Việt Nam.
+- Những nội dung về Amazon Bedrock AgentCore giúp tôi hiểu rõ hơn các yếu tố cần cân nhắc khi tích hợp chức năng AI vào dự án Bếp Thông Minh.
+- Các chia sẻ về bảo mật, giám sát và tối ưu chi phí cũng là cơ sở để xem xét, cải thiện cách triển khai các dịch vụ AWS trong dự án.
+- Qua sự kiện, tôi nhận ra cần đánh giá giải pháp dựa trên nhu cầu thực tế, mức độ phức tạp và chi phí, thay vì chỉ lựa chọn công nghệ theo xu hướng.
 
-### Trải nghiệm tại Ho Chi Minh City Watch Party
+### Trải nghiệm tham gia sự kiện
 
-Mặc dù sự kiện chính được tổ chức tại Hà Nội, việc tham gia Watch Party tại Thành phố Hồ Chí Minh giúp tôi có cơ hội theo dõi các phiên chia sẻ trực tiếp cùng các thực tập sinh và mentor trong cộng đồng FCJ.
-
-Buổi gặp mặt tại địa phương tạo điều kiện để mọi người trao đổi ý tưởng, thảo luận về các quyết định thiết kế kiến trúc trong thực tế và học hỏi lẫn nhau trong lúc theo dõi livestream. Đây cũng là dịp giúp tôi kết nối gần hơn với cộng đồng AWS tại Thành phố Hồ Chí Minh.
-
-### Những kiến thức rút ra và cách áp dụng vào kỳ thực tập
-
-#### 1. Hình thành tư duy ưu tiên môi trường Production
-
-Một bản demo hoạt động được không đồng nghĩa với việc ứng dụng đã sẵn sàng triển khai trong môi trường production. Logging, monitoring, observability, độ tin cậy và kiểm soát chi phí cần được cân nhắc ngay từ giai đoạn thiết kế ban đầu.
-
-#### 2. Ưu tiên bảo mật dựa trên danh tính
-
-Không nên cấp quyền truy cập quá rộng cho workload hoặc AI agent chỉ vì sự tiện lợi. Việc sử dụng thông tin xác thực tạm thời, IAM policies giới hạn đúng phạm vi và tuân thủ nguyên tắc đặc quyền tối thiểu giúp giảm thiểu các rủi ro bảo mật không cần thiết.
-
-#### 3. Học hỏi và chia sẻ thông qua cộng đồng
-
-Việc học hỏi từ những người có kinh nghiệm thực tế, mentor và AWS Community Builders mang lại góc nhìn ứng dụng vượt ra ngoài tài liệu kỹ thuật. Ghi lại và chia sẻ những kiến thức này cũng giúp tôi củng cố hiểu biết về kiến trúc cloud và các phương pháp kỹ thuật phần mềm.
-
-![Ảnh tham gia](event.png)
-
-
+Sự kiện mang đến cơ hội tiếp cận nhiều chủ đề đang được ứng dụng trong môi trường doanh nghiệp, từ Voice AI, quản trị tài nguyên đa tài khoản đến tự động hóa kiểm thử bảo mật và triển khai AI Agent. Các ví dụ và phần trình diễn giúp tôi hình dung rõ hơn cách những dịch vụ, công cụ AWS được kết hợp để giải quyết các bài toán thực tế.
