@@ -77,5 +77,6 @@ Không nên cấp quyền truy cập quá rộng cho workload hoặc AI agent ch
 
 Việc học hỏi từ những người có kinh nghiệm thực tế, mentor và AWS Community Builders mang lại góc nhìn ứng dụng vượt ra ngoài tài liệu kỹ thuật. Ghi lại và chia sẻ những kiến thức này cũng giúp tôi củng cố hiểu biết về kiến trúc cloud và các phương pháp kỹ thuật phần mềm.
 
+![Ảnh tham gia](event.png)
 
 
