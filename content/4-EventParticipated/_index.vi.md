@@ -1,5 +1,5 @@
 ---
-title: "Các events đã tham gia"
+title: "Event"
 date: 2026-01-01
 weight: 4
 chapter: false
