@@ -41,7 +41,7 @@ pre: " <b> 4. </b> "
 ---
 
 ### [Event 4](4.4-Event4/)
-&emsp;**Tên sự kiện:** First Cloud AI Journey: Weekly Meet Up 14/11
+&emsp;**Tên sự kiện:** Trò chuyện cùng Dr. Werner
 
 &emsp;**Thời gian:** 09:00 ngày 02/10/2026
 
