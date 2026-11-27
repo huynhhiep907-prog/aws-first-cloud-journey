@@ -87,8 +87,4 @@ Sự kiện mang đến cơ hội tiếp cận nhiều chủ đề đang đượ
 
 Bên cạnh kiến thức kỹ thuật, tôi cũng học được cách nhìn nhận một giải pháp trên nhiều khía cạnh: kiến trúc, bảo mật, hiệu năng, khả năng vận hành và chi phí. Đây là những kinh nghiệm hữu ích để áp dụng vào quá trình học tập cũng như hoàn thiện dự án thực tập.
 
-### Một số hình ảnh khi tham gia sự kiện
 
-*Thêm hình ảnh của bạn tại đây.*
-
-> Nhìn chung, Weekly Meet Up giúp tôi cập nhật thêm các hướng phát triển mới trong hệ sinh thái AWS và có thêm cơ sở để lựa chọn, áp dụng công nghệ phù hợp cho các dự án thực tế.
