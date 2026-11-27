@@ -9,8 +9,7 @@ pre: " <b> 4.3. </b> "
 ### Event Overview
 
 - **Event Name:** First Cloud AI Journey: Weekly Meet Up 14/11 
-- **Date:** Saturday Morning, November 14, 2026
-- **Location:** AWS Vietnam Office (Ho Chi Minh City)
+- **Date:** November 14, 2026
 - **Speakers:** Nguyễn Lâm Anh, Trần Phương Huyền, Phúc Khang, Huỳnh An Khương, Nguyễn Quốc Bảo (AWS First Cloud Journey – FCJ Members)
 - **Organizers:** AWS First Cloud Journey (FCJ) & AWS Study Group
 
