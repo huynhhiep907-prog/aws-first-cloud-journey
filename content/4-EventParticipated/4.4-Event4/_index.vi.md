@@ -55,3 +55,5 @@ Dr. Werner đề cập đến năm phẩm chất quan trọng mà kỹ sư cần
 2. **Chủ động chịu trách nhiệm khi phát triển phần mềm với AI:** Khi sử dụng các công cụ AI hỗ trợ lập trình trong dự án, nhà phát triển cần kiểm tra kỹ mã nguồn được tạo ra, thử nghiệm hành vi, rà soát nguy cơ bảo mật và hiểu rõ những gì mình triển khai. AI có thể hỗ trợ quá trình thực hiện, nhưng trách nhiệm đối với sản phẩm cuối cùng vẫn thuộc về kỹ sư.
 
 3. **Rèn luyện kỹ năng giao tiếp và tư duy vượt ra ngoài từng thành phần:** Tôi hiểu rõ hơn tầm quan trọng của việc gắn các quyết định kỹ thuật với mục tiêu kinh doanh. Khả năng tư duy hệ thống và giải thích rõ những đánh đổi trong kiến trúc là các kỹ năng cần thiết. Bên cạnh đó, việc chia sẻ kiến thức và kinh nghiệm với các thành viên trong cộng đồng AWS First Cloud Journey cũng là cách thiết thực để cùng nhau phát triển.
+
+![Ảnh tham gia](event4.png)
