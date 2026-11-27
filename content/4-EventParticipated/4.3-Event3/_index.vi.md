@@ -1,5 +1,5 @@
 ---
-title: "AWS Cloud Mastery: Xây dựng Amazon Bedrock Agent từ Prototype đến Production"
+title: "First Cloud AI Journey: Weekly Meet Up 14/11 "
 date: 2026-11-14
 weight: 1
 chapter: false
@@ -8,7 +8,7 @@ pre: " <b> 4.3. </b> "
 
 ### Tổng quan sự kiện
 
-- **Tên sự kiện:** AWS Cloud Mastery – Amazon Bedrock Agent: Từ Prototype đến Production
+- **Tên sự kiện:** First Cloud AI Journey: Weekly Meet Up 14/11
 - **Thời gian:** Sáng thứ Bảy, ngày 14 tháng 11 năm 2026
 - **Địa điểm:** Văn phòng AWS Việt Nam (Thành phố Hồ Chí Minh)
 - **Diễn giả:** Nguyễn Lâm Anh, Trần Phương Huyền, Phúc Khang, Huỳnh An Khương, Nguyễn Quốc Bảo (Thành viên AWS First Cloud Journey – FCJ)
