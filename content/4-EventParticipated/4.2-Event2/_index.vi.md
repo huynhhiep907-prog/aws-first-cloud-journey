@@ -82,3 +82,5 @@ pre: " <b> 4.2. </b> "
 ### Trải nghiệm tham gia sự kiện
 
 Sự kiện mang đến cơ hội tiếp cận nhiều chủ đề đang được ứng dụng trong môi trường doanh nghiệp, từ Voice AI, quản trị tài nguyên đa tài khoản đến tự động hóa kiểm thử bảo mật và triển khai AI Agent. Các ví dụ và phần trình diễn giúp tôi hình dung rõ hơn cách những dịch vụ, công cụ AWS được kết hợp để giải quyết các bài toán thực tế.
+
+![Ảnh tham gia](event2.png)
