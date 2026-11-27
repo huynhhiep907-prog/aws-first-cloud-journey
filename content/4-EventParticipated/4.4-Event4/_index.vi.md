@@ -1,5 +1,5 @@
 ---
-title: "Trò chuyện cùng Dr. Werner: Định hướng tương lai Cloud và AI tại Việt Nam"
+title: "Trò chuyện cùng Dr. Werner"
 date: 2026-10-02
 weight: 1
 chapter: false
