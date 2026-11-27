@@ -9,8 +9,7 @@ pre: " <b> 4.3. </b> "
 ### Tổng quan sự kiện
 
 - **Tên sự kiện:** First Cloud AI Journey: Weekly Meet Up 14/11
-- **Thời gian:** Sáng thứ Bảy, ngày 14 tháng 11 năm 2026
-- **Địa điểm:** Văn phòng AWS Việt Nam (Thành phố Hồ Chí Minh)
+- **Thời gian:** ngày 14 tháng 11 năm 2026
 - **Diễn giả:** Nguyễn Lâm Anh, Trần Phương Huyền, Phúc Khang, Huỳnh An Khương, Nguyễn Quốc Bảo (Thành viên AWS First Cloud Journey – FCJ)
 - **Đơn vị tổ chức:** AWS First Cloud Journey (FCJ) và AWS Study Group
 
