@@ -9,9 +9,9 @@ pre: " <b> 4. </b> "
 
 
 ### [Event 1](4.1-Event1/)  
-&emsp;**Event Name:** First Cloud AI Journey: Weekly Meet Up 24/10  
+&emsp;**Event Name:** AWS Cloud and AI Day Hanoi 2026 – Ho Chi Minh City Watch Party Hub 
 
-&emsp;**Date & Time:** 09:00, October 24, 2026  
+&emsp;**Date & Time:** 08:00, September 29, 2026  
 
 &emsp;**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City  
 
