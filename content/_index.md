@@ -24,7 +24,7 @@ chapter: false
 | Internship duration | September 14, 2026 – December 14, 2026 |
 
 
-![Your profile picture](/images/avatar.png)
+![Your profile picture](hình.png)
 
 ### Report Content
 
