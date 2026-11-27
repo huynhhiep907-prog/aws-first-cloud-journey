@@ -1,7 +1,7 @@
 ---
 title: "Chat with Dr. Werner"
 date: 2026-10-02
-weight: 1
+weight: 4
 chapter: false
 pre: " <b> 4.4. </b> "
 ---
