@@ -31,7 +31,7 @@ pre: " <b> 4. </b> "
 ---
 
 ### [Event 3](4.3-Event3/)  
-&emsp;**Event Name:** AWS Cloud Mastery – Amazon Bedrock Agent: From Prototype to Production
+&emsp;**Event Name:** First Cloud AI Journey: Weekly Meet Up 14/11 
 
 &emsp;**Date & Time:** 09:00, November 14, 2026    
 
