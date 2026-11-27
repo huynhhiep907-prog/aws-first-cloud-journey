@@ -1,6 +1,6 @@
 ---
 title: "Blogs AWS"
-date: 2026-01-01
+date: 2026-9-14
 weight: 3
 chapter: false
 pre: " <b> 3. </b> "
