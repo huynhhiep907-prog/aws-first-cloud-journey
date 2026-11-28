@@ -1,31 +1,40 @@
 ---
 title: "Workshop"
-date: 2026-01-01
+date: 2026-11-27
 weight: 5
 chapter: false
-pre: " <b> 5. </b> "
+pre: "<b>5. </b>"
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# Secure Hybrid Access to S3 using VPC Endpoints
+# Bếp Thông Minh (Smart Kitchen) – AWS Workshop
 
-#### Overview
+## Overview
 
-**AWS PrivateLink** provides private connectivity to AWS services from VPCs and your on-premises networks, without exposing your traffic to the Public Internet.
+This workshop documents the implementation and deployment of **Bếp Thông Minh (Smart Kitchen)**, a recipe recommendation application built with AWS managed services. The application helps users discover recipes based on available ingredients, budget, cooking time, dietary preferences, mood, and weather. It also provides nearby ingredient-store lookup.
 
-In this lab, you will learn how to create, configure, and test VPC endpoints that enable your workloads to reach AWS services without traversing the Public Internet.
+The solution separates the static frontend from the serverless backend. Amazon S3 stores the frontend files, while Amazon CloudFront delivers the website over HTTPS. Amazon API Gateway exposes the application endpoints and invokes AWS Lambda. The Lambda function retrieves recipe data from Amazon DynamoDB and integrates with Amazon Location Service for address geocoding and nearby place searches. Amazon Bedrock is integrated for conversational recipe suggestions, with a fallback response path when model invocation is unavailable.
 
-You will create two types of endpoints to access Amazon S3: a Gateway VPC endpoint, and an Interface VPC endpoint. These two types of VPC endpoints offer different benefits depending on if you are accessing Amazon S3 from the cloud or your on-premises location
-+ **Gateway** - Create a gateway endpoint to send traffic to Amazon S3 or DynamoDB using private IP addresses.You route traffic from your VPC to the gateway endpoint using route tables.
-+ **Interface** - Create an interface endpoint to send traffic to endpoint services that use a Network Load Balancer to distribute traffic. Traffic destined for the endpoint service is resolved using DNS.
+## AWS Services
 
-#### Content
+| AWS Service | Purpose |
+| :--- | :--- |
+| Amazon S3 | Hosts the static frontend files |
+| Amazon CloudFront | Delivers the frontend over HTTPS |
+| Amazon API Gateway | Exposes the application HTTP routes |
+| AWS Lambda | Handles recipe search, nearby-store lookup, and chatbot requests |
+| Amazon DynamoDB | Stores recipe records |
+| Amazon Location Service | Geocodes manually entered addresses and searches for nearby stores |
+| Amazon Bedrock | Supports AI-based recipe suggestions |
+| Amazon CloudWatch | Stores Lambda execution logs |
 
-1. [Workshop overview](5.1-Workshop-overview)
-2. [Prerequiste](5.2-Prerequiste/)
-3. [Access S3 from VPC](5.3-S3-vpc/)
-4. [Access S3 from On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (Bonus)](5.5-Policy/)
-6. [Clean up](5.6-Cleanup/)
+## Workshop Contents
+
+1. [Overview and Prerequisites](5.1-Workshop-overview/)
+2. [Create the DynamoDB Database](5.2-Setup-Dynamodb/)
+3. [Configure the AWS IAM Role](5.3-Configure-IAM-role/)
+4. [Deploy the AWS Lambda Backend](5.4-Deploy-Lambda-backend/)
+5. [Configure Amazon API Gateway](5.5-Configure-API-gateway/)
+6. [Deploy the Frontend to S3 and CloudFront](5.6-Deploy-S3-Cloudfront/)
+7. [Application Testing](5.7-Test-Application/)
+8. [Clean Up Resources](5.8-Cleanup/)
+
