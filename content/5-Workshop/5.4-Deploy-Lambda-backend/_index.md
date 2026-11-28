@@ -477,8 +477,8 @@ def handle_nearby_stores(params):
 ```
 
   * ****Determine the search center (`lat`, `lng`):**** If the user enters a manual address (`address`), the function calls `geo_places_client.geocode()` (with `search_text()` as a fallback) to convert the Vietnamese address into coordinates. If the address is empty, it uses the GPS coordinates provided by the browser.
-  * ****Search for retailers based on the budget tier (`tier`):**** Maps the budget tiers (`low`, `mid`, `high`) to relevant store keyword groups (markets/grocery stores, Bách Hóa Xanh/WinMart+/Co.op Food, or Co.opmart/Lotte Mart/GO!), then calls `geo_places_client.search_text()` with `BiasPosition` centered on the user's coordinates.
-  * ****Filter irrelevant results and calculate distances (`haversine_meters`):**** Excludes places that do not sell groceries (such as cafés, restaurants, spas, and gas stations), removes duplicate locations, calculates straight-line distances in meters within a 10 km radius, and sorts results from nearest to farthest for `GET /nearby-stores`.
+  * **Search for retailers based on the budget tier (`tier`):** Maps the budget tiers (`low`, `mid`, `high`) to relevant store keyword groups (markets/grocery stores, Bách Hóa Xanh/WinMart+/Co.op Food, or Co.opmart/Lotte Mart/GO!), then calls `geo_places_client.search_text()` with `BiasPosition` centered on the user's coordinates.
+  * **Filter irrelevant results and calculate distances (`haversine_meters`):** Excludes places that do not sell groceries (such as cafés, restaurants, spas, and gas stations), removes duplicate locations, calculates straight-line distances in meters within a 10 km radius, and sorts results from nearest to farthest for `GET /nearby-stores`.
 
 ### 2.5. AI Chef Chatbot for Mood-Based Suggestions (Amazon Bedrock)
 
@@ -738,7 +738,7 @@ def lambda_handler(event, context):
 
 ## 3. Processing Flow Summary
 
-| Function / Component | AWS Service tương tác | API Route | Main Output |
+| Function / Component | AWS Service Interaction | API Route | Main Output |
 | :--- | :--- | :--- | :--- |
 | `handle_recipe_search` | Amazon DynamoDB (`Scan`) | `GET /search` | Filtered recipes ranked by ingredient matches |
 | `handle_nearby_stores` | Amazon Location (`Geocode`, `SearchText`) | `GET /nearby-stores` | Search center coordinates and nearby stores within 10 km, filtered by budget |
