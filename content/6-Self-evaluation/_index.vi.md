@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 6. </b> "
 ---
 
-# Tự đánh giá
+
 
 Trong quá trình tham gia chương trình **Workforce Bootcamp - First Cloud AI Journey (FCAJ)** tại **Amazon Web Services Viet Nam Company Limited**, tôi có cơ hội tiếp cận môi trường học tập và thực hành tập trung vào điện toán đám mây, đồng thời vận dụng kiến thức đã học vào quá trình xây dựng sản phẩm thực tế.
 
