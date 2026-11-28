@@ -13,7 +13,7 @@ The **Bếp Thông Minh (Smart Kitchen)** application separates the static front
 | Component | AWS Service | Primary Role |
 | :--- | :--- | :--- |
 | Frontend Hosting | Amazon S3 | Stores the static frontend file (`template.html`) |
-| CDN & Bảo mật | Amazon CloudFront | Distributes content globally and provides HTTPS for HTML5 Geolocation |
+| CDN & Security | Amazon CloudFront | Distributes content globally and provides HTTPS for HTML5 Geolocation |
 | API Layer | Amazon API Gateway | Provides HTTP endpoints (`GET /search`, `GET /nearby-stores`, `POST /chat`) |
 | Compute | AWS Lambda (Python 3.12) | Processes searches and calls Bedrock AI and location services |
 | Database | Amazon DynamoDB | Stores recipe data (`RecipesTable`) |
@@ -21,7 +21,7 @@ The **Bếp Thông Minh (Smart Kitchen)** application separates the static front
 | Geospatial | Amazon Location Service | Geocodes manually entered addresses and finds ingredient retailers (`geo-places` v2) |
 
 #### Project Architecture:
-![sơ đồ dự án](DemoFinalWorkShop.drawio.png)
+![Project architecture](DemoFinalWorkShop.drawio.png)
 
 
 #### Prerequisites
@@ -29,4 +29,4 @@ The **Bếp Thông Minh (Smart Kitchen)** application separates the static front
 2. Use **Asia Pacific (Singapore) — `ap-southeast-1`** as the deployment Region.
 3. Enable access to the **Amazon Nova Micro** model (`apac.amazon.nova-micro-v1:0`) in **Amazon Bedrock → Model access**.
 
-![ảnh](anh1.png)
+![Prerequisite screenshot](anh1.png)
