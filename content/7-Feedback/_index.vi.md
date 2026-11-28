@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 7. </b> "
 ---
 
-# Chia sẻ và đóng góp ý kiến
+
 
 Tham gia chương trình **Workforce Bootcamp - First Cloud AI Journey (FCAJ)** là cơ hội để tôi tiếp cận gần hơn với cách ứng dụng kiến thức Cloud vào một sản phẩm thực tế. Qua quá trình học tập, thực hành và hoàn thiện dự án, tôi có thêm góc nhìn về công việc phát triển ứng dụng trên AWS, đồng thời nhận ra một số điểm có thể tiếp tục cải thiện để trải nghiệm của các học viên ở những khóa sau hiệu quả hơn.
 
