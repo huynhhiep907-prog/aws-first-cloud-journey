@@ -1,33 +1,39 @@
 ---
 title: "Workshop"
-date: 2026-01-01
+date: 2026-11-27
 weight: 5
 chapter: false
-pre: " <b> 5. </b> "
+pre: "<b>5. </b>"
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+# Bếp Thông Minh (Smart Kitchen) – AWS Workshop
 
+## Tổng quan
 
-# Đảm bảo truy cập Hybrid an toàn đến S3 bằng cách sử dụng VPC endpoint
+Workshop này trình bày quá trình xây dựng và triển khai **Bếp Thông Minh (Smart Kitchen)**, một ứng dụng gợi ý công thức nấu ăn được phát triển trên các dịch vụ được quản lý của AWS. Ứng dụng hỗ trợ người dùng tìm kiếm món ăn dựa trên nguyên liệu sẵn có, ngân sách, thời gian nấu, chế độ ăn uống, tâm trạng và thời tiết. Ngoài ra, ứng dụng còn hỗ trợ tìm kiếm các cửa hàng bán nguyên liệu ở gần người dùng.
 
-#### Tổng quan
+Giải pháp được thiết kế với frontend tĩnh và backend serverless tách biệt. Amazon S3 lưu trữ các tệp frontend, trong khi Amazon CloudFront phân phối website qua HTTPS. Amazon API Gateway cung cấp các endpoint cho ứng dụng và chuyển tiếp yêu cầu đến AWS Lambda. Hàm Lambda truy xuất dữ liệu công thức từ Amazon DynamoDB và tích hợp với Amazon Location Service để chuyển đổi địa chỉ thành tọa độ cũng như tìm kiếm các địa điểm gần đó. Amazon Bedrock được tích hợp để hỗ trợ gợi ý công thức nấu ăn qua hội thoại; ứng dụng có cơ chế phản hồi dự phòng khi không thể gọi mô hình AI.
 
-**AWS PrivateLink** cung cấp kết nối riêng tư đến các dịch vụ aws từ VPCs hoặc trung tâm dữ liệu (on-premise) mà không làm lộ lưu lượng truy cập ra ngoài public internet.
+## Các dịch vụ AWS sử dụng
 
-Trong bài lab này, chúng ta sẽ học cách tạo, cấu hình, và kiểm tra VPC endpoints để cho phép workload của bạn tiếp cận các dịch vụ AWS mà không cần đi qua Internet công cộng.
+| Dịch vụ AWS | Vai trò |
+| :--- | :--- |
+| Amazon S3 | Lưu trữ các tệp frontend tĩnh |
+| Amazon CloudFront | Phân phối frontend qua HTTPS |
+| Amazon API Gateway | Cung cấp các HTTP route cho ứng dụng |
+| AWS Lambda | Xử lý tìm kiếm công thức, tìm cửa hàng gần vị trí người dùng và yêu cầu chatbot |
+| Amazon DynamoDB | Lưu trữ dữ liệu công thức nấu ăn |
+| Amazon Location Service | Chuyển đổi địa chỉ người dùng nhập thành tọa độ và tìm kiếm cửa hàng gần đó |
+| Amazon Bedrock | Hỗ trợ gợi ý công thức nấu ăn bằng AI |
+| Amazon CloudWatch | Lưu trữ log trong quá trình thực thi Lambda |
 
-Chúng ta sẽ tạo hai loại endpoints để truy cập đến Amazon S3: gateway vpc endpoint và interface vpc endpoint. Hai loại vpc endpoints này mang đến nhiều lợi ích tùy thuộc vào việc bạn truy cập đến S3 từ môi trường cloud hay từ trung tâm dữ liệu (on-premise).
-+ **Gateway** - Tạo gateway endpoint để gửi lưu lượng đến Amazon S3 hoặc DynamoDB using private IP addresses. Bạn điều hướng lưu lượng từ VPC của bạn đến gateway endpoint bằng các bảng định tuyến (route tables)
-+ **Interface** - Tạo interface endpoint để gửi lưu lượng đến các dịch vụ điểm cuối (endpoints) sử dụng Network Load Balancer để phân phối lưu lượng. Lưu lượng dành cho dịch vụ điểm cuối được resolved bằng DNS.
+## Nội dung Workshop
 
-#### Nội dung
-
-1. [Tổng quan về workshop](5.1-Workshop-overview/)
-2. [Chuẩn bị](5.2-Prerequiste/)
-3. [Truy cập đến S3 từ VPC](5.3-S3-vpc/)
-4. [Truy cập đến S3 từ TTDL On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (làm thêm)](5.5-Policy/)
-6. [Dọn dẹp tài nguyên](5.6-Cleanup/)
+1. [Tổng quan và các yêu cầu chuẩn bị](5.1-Workshop-overview/)
+2. [Tạo cơ sở dữ liệu DynamoDB](5.2-Setup-Dynamodb/)
+3. [Cấu hình IAM Role](5.3-Configure-IAM-role/)
+4. [Triển khai backend bằng AWS Lambda](5.4-Deploy-Lambda-backend/)
+5. [Cấu hình Amazon API Gateway](5.5-Configure-API-gateway/)
+6. [Triển khai frontend lên S3 và CloudFront](5.6-Deploy-S3-Cloudfront/)
+7. [Kiểm thử ứng dụng](5.7-Test-Application/)
+8. [Dọn dẹp tài nguyên](5.8-Cleanup/)
