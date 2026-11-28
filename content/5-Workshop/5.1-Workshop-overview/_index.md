@@ -1,18 +1,32 @@
 ---
-title : "Introduction"
-date : 2026-01-01 
-weight : 1 
-chapter : false
-pre : " <b> 5.1. </b> "
+title: "Overview and Prerequisites"
+date: 2026-11-27
+weight: 1
+chapter: false
+pre: "<b>5.1. </b>"
 ---
 
-#### VPC endpoints
-+ **VPC endpoints** are virtual devices. They are horizontally scaled, redundant, and highly available VPC components. They allow communication between your compute resources and AWS services without imposing availability risks.
-+ Compute resources running in VPC can access  **Amazon S3**  using a Gateway endpoint. PrivateLink interface endpoints can be used by compute resources running in VPC or on-premises.
+#### System Architecture
 
-#### Workshop overview
-In this workshop, you will use two VPCs. 
-+ **"VPC Cloud"** is for cloud resources such as a  **Gateway endpoint** and an EC2 instance to test with. 
-+ **"VPC On-Prem"** simulates an on-premises environment such as a factory or corporate datacenter. An EC2 instance running strongSwan VPN software has been deployed in "VPC On-prem" and automatically configured to establish a Site-to-Site VPN tunnel with AWS Transit Gateway. This VPN simulates connectivity from an on-premises location to the AWS cloud. To minimize costs, only one VPN instance is provisioned to support this workshop. When planning VPN connectivity for your production workloads, AWS recommends using multiple VPN devices for high availability.
+The **Bếp Thông Minh (Smart Kitchen)** application separates the static frontend from the business-logic backend to optimize operating costs through a pay-as-you-go model and support automatic scaling:
 
-![overview](/images/5-Workshop/5.1-Workshop-overview/diagram1.png)
+| Component | AWS Service | Primary Role |
+| :--- | :--- | :--- |
+| Frontend Hosting | Amazon S3 | Stores the static frontend file (`template.html`) |
+| CDN & Bảo mật | Amazon CloudFront | Distributes content globally and provides HTTPS for HTML5 Geolocation |
+| API Layer | Amazon API Gateway | Provides HTTP endpoints (`GET /search`, `GET /nearby-stores`, `POST /chat`) |
+| Compute | AWS Lambda (Python 3.12) | Processes searches and calls Bedrock AI and location services |
+| Database | Amazon DynamoDB | Stores recipe data (`RecipesTable`) |
+| Generative AI | Amazon Bedrock | Provides recipe suggestions based on mood and weather (`apac.amazon.nova-micro-v1:0`) |
+| Geospatial | Amazon Location Service | Geocodes manually entered addresses and finds ingredient retailers (`geo-places` v2) |
+
+#### Project Architecture:
+![sơ đồ dự án](DemoFinalWorkShop.drawio.png)
+
+
+#### Prerequisites
+1. An AWS account with permissions to manage **IAM, DynamoDB, Lambda, API Gateway, S3, CloudFront, Bedrock**, and **Amazon Location Service**.
+2. Use **Asia Pacific (Singapore) — `ap-southeast-1`** as the deployment Region.
+3. Enable access to the **Amazon Nova Micro** model (`apac.amazon.nova-micro-v1:0`) in **Amazon Bedrock → Model access**.
+
+![ảnh](anh1.png)
