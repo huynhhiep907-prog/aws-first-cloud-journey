@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 6. </b> "
 ---
 
-# Self-Assessment
+
 
 During the **Workforce Bootcamp - First Cloud AI Journey (FCAJ)** program at **Amazon Web Services Viet Nam Company Limited**, I had the opportunity to explore a learning environment focused on cloud computing and apply the knowledge I had gained at university to a practical project.
 
