@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 7. </b> "
 ---
 
-# Sharing and Feedback
+
 
 Participating in the **Workforce Bootcamp - First Cloud AI Journey (FCAJ)** program gave me an opportunity to better understand how cloud knowledge can be applied to a practical product. Through learning, hands-on practice, and project development, I gained a broader perspective on building applications on AWS and identified several areas that could be improved to make the experience more effective for future participants.
 
